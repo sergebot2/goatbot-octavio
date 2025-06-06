@@ -3,7 +3,7 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "╭─⌾𝗠𝗘𝗦𝗦𝗜𝗘 𝗢𝗦𝗔𝗡𝗚𝗢 𝗕𝗢𝗧⋅⌾──╮\n│\n│ https://www.facebook.com/messie.osango.61564382117276 \n│\n╰─────────────⌾";
+const doNotDelete = "╭─⌾𝗠𝗘𝗦𝗦𝗜𝗘 𝗢𝗦𝗔𝗡𝗚𝗢 ⋅⌾──╮\n│\n│ https://www.facebook.com/messie.osango.61564382117276 \n│\n╰─────────────⌾";
 
 function applyFont(text) {
   const fontMap = {
