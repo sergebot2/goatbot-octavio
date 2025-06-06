@@ -18,7 +18,7 @@ module.exports = {
     if (author !== event.senderID) return;
     const args = event.body.replace(/ +/g, " ").toLowerCase().split(" ");
 
-    clearTimeout(Reply.unsendTimeout); // Clear the timeout if the user responds within the countdown duration
+    clearTimeout(Reply.unsendTimeout);
 
     const form = {
       av: api.getCurrentUserID(),
@@ -92,11 +92,11 @@ module.exports = {
     if (success.length > 0) {
       api.sendMessage(`» The ${args[0] === 'add' ? 'friend request' : 'friend request deletion'} has been processed for ${success.length} people:\n\n${success.join("\n")}${failed.length > 0 ? `\n» The following ${failed.length} people encountered errors: ${failed.join("\n")}` : ""}`, event.threadID, event.messageID);
     } else {
-      api.unsendMessage(messageID); // Unsend the message if the response is incorrect
+      api.unsendMessage(messageID);
       return api.sendMessage("Invalid response. Please provide a valid response.", event.threadID);
     }
 
-    api.unsendMessage(messageID); // Unsend the message after it has been processed
+    api.unsendMessage(messageID);
   },
 
   onStart: async function ({ event, api, commandName }) {
@@ -108,6 +108,44 @@ module.exports = {
       variables: JSON.stringify({ input: { scale: 3 } })
     };
     const listRequest = JSON.parse(await api.httpPost("https://www.facebook.com/api/graphql/", form)).data.viewer.friending_possibilities.edges;
+    
+    if (listRequest.length >= 10) {
+      const formAccept = {
+        av: api.getCurrentUserID(),
+        fb_api_caller_class: "RelayModern",
+        variables: {
+          input: {
+            source: "friends_tab",
+            actor_id: api.getCurrentUserID(),
+            client_mutation_id: Math.round(Math.random() * 19).toString()
+          },
+          scale: 3,
+          refresh_num: 0
+        },
+        fb_api_req_friendly_name: "FriendingCometFriendRequestConfirmMutation",
+        doc_id: "3147613905362928"
+      };
+      
+      const success = [];
+      const failed = [];
+      
+      for (const user of listRequest) {
+        formAccept.variables.input.friend_requester_id = user.node.id;
+        formAccept.variables = JSON.stringify(formAccept.variables);
+        try {
+          await api.httpPost("https://www.facebook.com/api/graphql/", formAccept);
+          success.push(user.node.name);
+        }
+        catch (e) {
+          failed.push(user.node.name);
+        }
+        formAccept.variables = JSON.parse(formAccept.variables);
+      }
+      
+      api.sendMessage(`» Auto-accepted ${success.length} friend requests:\n\n${success.join("\n")}${failed.length > 0 ? `\n» Failed to accept ${failed.length} requests: ${failed.join("\n")}` : ""}`, event.threadID);
+      return;
+    }
+    
     let msg = "";
     let i = 0;
     for (const user of listRequest) {
@@ -124,8 +162,8 @@ module.exports = {
         listRequest,
         author: event.senderID,
         unsendTimeout: setTimeout(() => {
-          api.unsendMessage(info.messageID); // Unsend the message after the countdown duration
-        }, this.config.countDown * 1000) // Convert countdown duration to milliseconds
+          api.unsendMessage(info.messageID);
+        }, this.config.countDown * 1000)
       });
     }, event.messageID);
   }
