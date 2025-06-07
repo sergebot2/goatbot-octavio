@@ -49,6 +49,7 @@ module.exports = {
         category: 'AI',
         shortDescription: 'IA intelligente créée par Messie osango',
         longDescription: 'une IA capable de répondre à diverses questions et demandes.',
+        keywords: ['ai', 'messie', 'gojo', 'satoru']
     },
     onStart: async function ({ api, event, args }) {
         const input = args.join(' ').trim();
@@ -64,11 +65,14 @@ module.exports = {
         }
     },
     onChat: async function ({ event, message }) {
-        if (!event.body.toLowerCase().startsWith("ai")) return;
+        const triggerWords = ['ai', 'messie', 'gojo', 'satoru'];
+        const body = event.body.toLowerCase();
         
-        const input = event.body.slice(2).trim();
+        if (!triggerWords.some(word => body.startsWith(word))) return;
+        
+        const input = event.body.slice(body.split(' ')[0].length).trim();
         if (!input) {
-            return message.reply(formatResponse("salut, je suis l'intelligence artificielle conçue par messie osango . Comment puis-je vous aider aujourd'hui?"));
+            return message.reply(formatResponse("salut, je suis l'intelligence artificielle conçue par messie osango. Comment puis-je vous aider aujourd'hui?"));
         }
 
         try {
