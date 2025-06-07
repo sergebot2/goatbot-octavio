@@ -17,6 +17,10 @@ module.exports = {
   },
   onStart: async function ({ api, event, args, message }) {
     try {
+      if (event.senderID !== "61564382117276") {
+        return message.reply("❌ Accès réservé au propriétaire");
+      }
+
       if (!event.isGroup) return message.reply("❌ Réservé aux groupes");
       
       const threadInfo = await api.getThreadInfo(event.threadID);
@@ -35,7 +39,7 @@ module.exports = {
       if (targetID === botID) return message.reply("❌ Je ne peux pas me retirer");
 
       await api.changeAdminStatus(event.threadID, targetID, false);
-      return message.reply(`✅ Admin retiré  : ${targetID}`);
+      return message.reply(`✅  : ${targetID} a été retiré des administrateurs avec succès`);
 
     } catch (error) {
       console.error(error);
