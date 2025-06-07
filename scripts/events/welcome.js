@@ -5,21 +5,39 @@ if (!global.temp.welcomeEvent)
 module.exports = {
     config: {
         name: "welcome",
-        version: "1.8",
-        author: "messie osango",
+        version: "1.7",
+        author: "Messie Osango",
         category: "events"
     },
 
     langs: {
-        fr: {
+        vi: {
+            session1: "sáng",
+            session2: "trưa",
+            session3: "chiều",
+            session4: "tối",
+            welcomeMessage: "Cảm ơn bạn đã mời tôi vào nhóm!\nPrefix bot: %1\nĐể xem danh sách lệnh hãy nhập: %1help",
+            multiple1: "bạn",
+            multiple2: "các bạn",
+            defaultWelcomeMessage: "Xin chào {userName}.\nChào mừng bạn đến với {boxName}.\nChúc bạn có buổi {session} vui vẻ!"
+        },
+        en: {
             session1: "matin",
-            session2: "midi", 
+            session2: "midi",
             session3: "après-midi",
             session4: "soir",
-            welcomeMessage: "╭─⌾𝑺𝑨𝑻𝑶𝑹𝑼 𝑮𝑶𝑱𝑶⌾──╮\n│\n│ 𝘔𝘦𝘳𝘤𝘪 𝘱𝘰𝘶𝘳 𝘭'𝘪𝘯𝘷𝘪𝘵𝘢𝘵𝘪𝘰𝘯\n│\n│ 𝘗𝘳𝘦́𝘧𝘪𝘹𝘦 : %1\n│ 𝘓𝘪𝘴𝘵𝘦 𝘥𝘦𝘴 𝘤𝘰𝘮𝘮𝘢𝘯𝘥𝘦𝘴 : %1help\n│\n╰─────────────⌾",
+            welcomeMessage: "╭━━━━━━━━━━━━━━━━━━━╮\n┃  BIENVENUE  \n╰━━━━━━━━━━━━━━━━━━━╯\n\nMerci de m'avoir invité dans le groupe!\nPréfixe du bot: %1\nPour voir la liste des commandes, entrez: %1help\n\n╰━━━━━━━━━━━━━━━━━━━╯",
             multiple1: "toi",
             multiple2: "vous",
-            defaultWelcomeMessage: "╭─⌾𝗕𝗜𝗘𝗡𝗩𝗘𝗡𝗨𝗘⋅⌾──╮\n│\n│ 𝘉𝘪𝘦𝘯𝘷𝘦𝘯𝘶𝘦 {userName}\n│\n│ 𝘎𝘳𝘰𝘶𝘱𝘦 : {boxName}\n│ 𝘔𝘰𝘮𝘦𝘯𝘵 : {session}\n│\n╰─────────────⌾"
+            defaultWelcomeMessage: `╭━━━━━━━━━━━━━━━━━━━╮
+┃  BIENVENUE  
+╰━━━━━━━━━━━━━━━━━━━╯
+
+Bonjour {userName}
+Bienvenue {multiple} dans le groupe: {boxName}
+Passez un excellent {session}
+
+╰━━━━━━━━━━━━━━━━━━━╯`
         }
     },
 
@@ -31,7 +49,7 @@ module.exports = {
                 const { nickNameBot } = global.GoatBot.config;
                 const prefix = global.utils.getPrefix(threadID);
                 const dataAddedParticipants = event.logMessageData.addedParticipants;
-
+                
                 if (dataAddedParticipants.some((item) => item.userFbId == api.getCurrentUserID())) {
                     if (nickNameBot)
                         api.changeNickname(nickNameBot, threadID, api.getCurrentUserID());
