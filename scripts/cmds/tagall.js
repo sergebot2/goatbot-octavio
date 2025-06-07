@@ -1,4 +1,4 @@
-€cmd install tagall.js module.exports = {
+module.exports = {
   config: {
     name: "tagall",
     version: "4.1",
