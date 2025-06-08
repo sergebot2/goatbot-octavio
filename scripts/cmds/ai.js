@@ -49,7 +49,7 @@ module.exports = {
         category: 'AI',
         shortDescription: 'IA intelligente créée par Messie osango',
         longDescription: 'une IA capable de répondre à diverses questions et demandes.',
-        keywords: ['ai', 'messie', 'gojo', 'satoru']
+        keywords: ['ai', 'gojo', 'satoru']
     },
     onStart: async function ({ api, event, args }) {
         const input = args.join(' ').trim();
@@ -65,7 +65,7 @@ module.exports = {
         }
     },
     onChat: async function ({ event, message }) {
-        const triggerWords = ['ai', 'messie', 'gojo', 'satoru'];
+        const triggerWords = ['ai', 'gojo', 'satoru'];
         const body = event.body.toLowerCase();
         
         if (!triggerWords.some(word => body.startsWith(word))) return;
