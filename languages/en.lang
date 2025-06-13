@@ -1,263 +1,92 @@
-const formatMessage = (content) => {
-  const lines = content.split('\n');
-  const maxLength = Math.max(...lines.map(line => line.length));
-  const topBorder = `╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾${'─'.repeat(maxLength - 10)}╮`;
-  const bottomBorder = `╰${'─'.repeat(maxLength + 2)}⌾⋅ ⋅⌾──────╯`;
-  
-  let formatted = `${topBorder}\n`;
-  lines.forEach(line => {
-    formatted += `│ ${line}${' '.repeat(maxLength - line.length)} │\n`;
-  });
-  formatted += `${bottomBorder}`;
-  return formatted;
-};
-
-Goat.newVersionDetected = formatMessage("Vous utilisez la version %1, la dernière version étant %2. Veuillez effectuer la mise à jour pour une meilleure utilisation du bot en saisissant la commande %3 dans la console/cmd.");
-
-Goat.autoRestart1 = formatMessage("Le bot redémarrera automatiquement dans %1");
-
-Goat.autoRestart2 = formatMessage("Le bot redémarrera automatiquement par une tâche cron : %1");
-
-Goat.googleApiTokenExpired = formatMessage("Le jeton d'actualisation de l'API Google a expiré ou a été révoqué. Veuillez obtenir un nouveau jeton sur https://developers.google.com/oauthplayground/");
-
-login.currentlyLogged = formatMessage("Connexion en cours");
-
-login.notFoundDirAccount = formatMessage("Impossible de trouver le fichier %1");
-
-login.loginToken = formatMessage("Connexion avec un jeton d'accès");
-
-login.loginCookieString = formatMessage("Connexion avec la chaîne de cookie");
-
-login.loginCookieNetscape = formatMessage("Connexion avec cookie netscape");
-
-login.loginCookieArray = formatMessage("Connexion avec un tableau de cookies");
-
-login.loginPassword = formatMessage("Connexion avec email et mot de passe...");
-
-login.accountError = formatMessage("Veuillez saisir le jeton d'autorisation complet sous la forme %1 ou le cookie sous la forme de chaîne %2 ou le cookie sous la forme de tableau :\n[\n { nom : %3, valeur : %4 },\n { nom : %5, valeur : %6 }\n]\nou\n[\n { clé : %3, valeur : %4 },\n { clé : %5, valeur : %6 }\n]\ndans le fichier %7");
-
-login.cannotFindAccount = formatMessage("Impossible de trouver le compte Facebook, choisissez l'une des options suivantes (entrez le numéro à choisir ou appuyez vers le bas et vers le haut pour choisir et entrez pour confirmer) :");
-
-login.chooseAccount = formatMessage("Connexion avec e-mail et mot de passe");
-
-login.chooseToken = formatMessage("Connexion avec autorisation complète du jeton");
-
-login.chooseCookieString = formatMessage("Connexion avec la chaîne de cookie");
-
-login.chooseCookieArray = formatMessage("Connexion avec un tableau de cookies");
-
-login.loginWith = formatMessage("Vous choisissez de %1");
-
-login.inputEmail = formatMessage("> Veuillez saisir votre e-mail (id) ou votre numéro de téléphone compte Facebook :");
-
-login.inputPassword = formatMessage("> Veuillez saisir votre mot de passe :");
-
-login.input2FA = formatMessage("> Veuillez saisir le code 2FA (laissez vide si vous n'avez pas activé 2FA) :");
-
-login.inputToken = formatMessage("> Veuillez saisir l'autorisation complète de votre jeton (commencez par EAAAA) :");
-
-login.inputCookieString = formatMessage("> Veuillez saisir votre chaîne de cookie :");
-
-login.inputCookieArray = formatMessage("> Veuillez saisir votre tableau de cookies :");
-
-login.refreshCookie = formatMessage("Actualisation du cookie...");
-
-login.refreshCookieError = formatMessage("Une erreur s'est produite lors de l'actualisation du cookie");
-
-login.refreshCookieSuccess = formatMessage("Cookie actualisé avec succès, redémarrez le bot pour utiliser le nouveau cookie");
-
-login.refreshCookieWarning = formatMessage("Vous avez activé le mode de rafraîchissement automatique des cookies, mais vous n'avez pas configuré l'e-mail et le mot de passe dans le fichier config.json");
-
-login.tokenError = formatMessage("Le jeton est invalide ou a expiré. Veuillez saisir le jeton d'autorisation complet au format %1 dans le fichier %2.");
-
-login.cookieError = formatMessage("Le cookie n'est pas valide ou a expiré.");
-
-login.loginPasswordError = formatMessage("Une erreur s'est produite lors de la connexion avec l'e-mail et le mot de passe dans config.json");
-
-login.loginSuccess = formatMessage("Connexion réussie");
-
-login.loginError = formatMessage("Une erreur s'est produite lors de la connexion");
-
-login.openDashboardSuccess = formatMessage("Page de gestion des bots ouverte avec succès");
-
-login.openDashboardError = formatMessage("Une erreur s'est produite lors de l'ouverture de la page de gestion du bot");
-
-login.changeGbanData = formatMessage("LES DONNÉES ONT ÉTÉ MODIFIÉES, IL EST ACTUELLEMENT IMPOSSIBLE DE LANCER UN BOT");
-
-login.errorNoti = formatMessage("Une erreur s'est produite lors de la récupération du message");
-
-login.refreshFbstateSuccess = formatMessage("Fichier %1 actualisé");
-
-login.refreshFbstateError = formatMessage("Une erreur s'est produite lors de l'actualisation du fichier %1");
-
-login.youAreBanned = formatMessage("Vous avez été banni du projet Goat-Bot");
-
-login.runBot = formatMessage("Lancer le bot avec succès, commencer à recevoir des messages des utilisateurs");
-
-login.notLoggedIn = formatMessage("Une erreur s'est produite, veuillez vérifier à nouveau votre compte Facebook");
-
-login.callBackError = formatMessage("Une erreur s'est produite lors du rappel listenMqtt");
-
-login.userBanned = formatMessage("Vous avez été banni de l'utilisation d'un bot !!");
-
-login.checkGbanError = formatMessage("Une erreur s'est produite lors de la vérification du GBAN, essayez de mettre à jour la source vers la dernière version (ouvrez cmd et tapez : node update)");
-
-login.gbanMessage = formatMessage("Vous avez été banni du projet Goat-Bot le %1 pour la raison : %2\nÂ» Heure : %3");
-
-login.gbanMessageToDate = formatMessage("Vous avez été banni du projet Goat-Bot le %1 pour la raison : %2\nÂ» Heure : %3\nÂ» À ce jour : %4");
-
-login.gbanAdminMessage = formatMessage("L'utilisateur %1 a été banni du projet Goat-Bot le %2 pour la raison : %3");
-
-login.openServerUptimeSuccess = formatMessage("ðŸš€ Serveur de disponibilité ouvert : %1");
-
-login.openServerUptimeError = formatMessage("Une erreur s'est produite, impossible d'ouvrir le serveur uptime");
-
-login.restartListenMessage = formatMessage("Redémarrage de ListenMQTT activé tous les %1");
-
-login.stopRestartListenMessage = formatMessage("Redémarrage ListenMQTT désactivé");
-
-login.restartListenMessageError = formatMessage("Une erreur s'est produite lors du redémarrage de ListenMQTT");
-
-login.restartListenMessage2 = formatMessage("ListenMQTT redémarré avec succès");
-
-login.refreshCookieAfter = formatMessage("Actualisation du cookie après %1");
-
-login.listenMqttClose = formatMessage("ListenMQTT fermé");
-
-login.listenMqttCloseByUser = formatMessage("ListenMQTT fermé par l'utilisateur");
-
-login.retryCheckLiveCookie = formatMessage("Nouvelle tentative de vérification du cookie... %1");
-
-login.startBotSuccess = formatMessage("Le bot a été démarré avec succès, commencez à recevoir des messages des utilisateurs");
-
-version.tooOldVersion = formatMessage("Vous utilisez une version trop ancienne de Goat-Bot, veuillez mettre à jour vers la dernière version en tapant la commande : %1 dans le cmd/console/terminal/shell");
-
-custom.refreshedFb_dtsg = formatMessage("Fb_dtsg et jazoest actualisés avec succès");
-
-custom.refreshedFb_dtsgError = formatMessage("Une erreur s'est produite lors de l'actualisation de fb_dtsg et jazoest");
-
-loadData.loadThreadDataSuccess = formatMessage("Les données du groupe %1 ont été chargées avec succès !");
-
-loadData.loadUserDataSuccess = formatMessage("Chargement réussi des données de l'utilisateur %1 !");
-
-loadData.refreshingThreadData = formatMessage("Mise à jour des informations des groupes...");
-
-loadData.refreshThreadDataSuccess = formatMessage("Informations mises à jour du groupe %1 !");
-
-loadData.refreshThreadDataError = formatMessage("Une erreur s'est produite lors de la mise à jour des informations des groupes !");
-
-loadScripts.loadScriptsError = formatMessage("Les fichiers %1 présentent une erreur lors du chargement :");
-
-loadScripts.loadScriptsNotMatchOrigin = formatMessage("Les fichiers %1 ne correspondent pas aux fichiers d'origine du projet github, assurez-vous que ces fichiers de commandes sont fiables :");
-
-loadScripts.NOT_FOUND = formatMessage("INTROUVABLE DANS LE CODE SOURCE ORIGINAL :");
-
-loadScripts.NOT_MATCH = formatMessage("NE CORRESPOND PAS AU CODE SOURCE ORIGINAL :");
-
-socketIO.connected = formatMessage("Connecté au serveur socket.io");
-
-socketIO.error = formatMessage("Une erreur s'est produite lors de la connexion au serveur socket.io");
-
-handlerCheckData.cantCreateThread = formatMessage("Les groupes avec l'ID '%1' ne peuvent pas être écrits dans la base de données !");
-
-handlerCheckData.cantCreateUser = formatMessage("Les utilisateurs avec l'ID '%1' ne peuvent pas être écrits dans la base de données !");
-
-handlerEvents.userBanned = formatMessage("Vous avez été banni de l'utilisation du bot\nÂ» Raison : %1\nÂ» Heure : %2\nÂ» ID utilisateur : %3");
-
-handlerEvents.threadBanned = formatMessage("Ce groupe a été banni de l'utilisation du bot\nÂ» Raison : %1\nÂ» Heure : %2\nÂ» ID du fil de discussion : %3");
-
-handlerEvents.onlyAdminBox = formatMessage("Ce groupe est actuellement activé, seuls les administrateurs de groupe peuvent utiliser le bot");
-
-handlerEvents.onlyAdminBot = formatMessage("â Œ | Actuellement, seul l'administrateur du bot peut utiliser le bot");
-
-handlerEvents.commandNotFound = formatMessage("La commande « %1 » n'existe pas, saisissez %2help pour voir toutes les commandes disponibles");
-
-handlerEvents.commandNotFound2 = formatMessage("La commande que vous utilisez n'existe pas, tapez %1help pour voir toutes les commandes disponibles");
-
-handlerEvents.commandSyntaxError = formatMessage("La commande que vous utilisez a une syntaxe incorrecte, veuillez saisir %1help %2 pour voir les détails de l'utilisation de cette commande");
-
-handlerEvents.onlyAdmin = formatMessage("â Œ | Seuls les administrateurs de groupe peuvent utiliser la commande « %1 »");
-
-handlerEvents.onlyAdminToUseOnReply = formatMessage("â Œ | Seuls les administrateurs de groupe peuvent utiliser la fonction de réponse de la commande « %1 »");
-
-handlerEvents.onlyAdminToUseOnReaction = formatMessage("â Œ | Seuls les administrateurs de groupe peuvent utiliser la fonction de réaction de la commande « %1 »");
-
-handlerEvents.onlyAdminBot2 = formatMessage("â Œ | Seul l'administrateur du bot peut utiliser la commande « %1 »");
-
-handlerEvents.onlyAdminBot2ToUseOnReply = formatMessage("â Œ | Seul l'administrateur du bot peut utiliser la fonction de réponse de la commande « %1 »");
-
-handlerEvents.onlyAdminBot2ToUseOnReaction = formatMessage("â Œ | Seul l'administrateur du bot peut utiliser la fonction de réaction de la commande « %1 »");
-
-handlerEvents.waitingForCommand = formatMessage("â ± Vous êtes dans le délai d'attente pour utiliser cette commande, veuillez revenir après %1s");
-
-handlerEvents.errorOccurred = formatMessage("â Œ [ %1 ]\nUne erreur s'est produite lors de la commande « %2 »\n\n%3");
-
-handlerEvents.errorOccurred2 = formatMessage("â Œ [ %1 ]\nUne erreur s'est produite lors de la commande onChat dans la commande « %2 »\n\n%3");
-
-handlerEvents.errorOccurred3 = formatMessage("â Œ [ %1 ]\nUne erreur s'est produite lors de l'exécution de onReply à la commande « %2 »\n\n%3");
-
-handlerEvents.errorOccurred4 = formatMessage("â Œ [ %1 ]\nUne erreur s'est produite lors de l'exécution de onReaction à la commande « %2 »\n\n%3");
-
-handlerEvents.errorOccurred5 = formatMessage("â Œ [ %1 ]\nUne erreur s'est produite lors de l'exécution de onEvent à la commande « %2 »\n\n%3");
-
-handlerEvents.errorOccurred6 = formatMessage("â Œ [ %1 ]\nUne erreur s'est produite lors de l'exécution de onEvent à la commande « %2 »\n\n%3");
-
-handlerEvents.errorOccurred7 = formatMessage("â Œ [ %1 ]\nUne erreur s'est produite lors de l'exécution de onAnyEvent à la commande « %2 »\n\n%3");
-
-handlerEvents.cannotFindCommandName = formatMessage("â Œ Impossible de trouver le nom de la commande pour exécuter cette réponse !");
-
-handlerEvents.cannotFindCommand = formatMessage("â Œ Impossible de trouver la commande « %1 » pour exécuter cette réponse !");
-
-autoUptime.autoUptimeTurnedOn = formatMessage("Mode AutoUptime activé");
-
-indexController.connectingMongoDB = formatMessage("Connexion à une base de données MONGODB");
-
-indexController.connectMongoDBSuccess = formatMessage("Base de données MongoDB connectée avec succès !");
-
-indexController.connectMongoDBError = formatMessage("Une erreur s'est produite lors de la connexion à la base de données Mongodb :");
-
-indexController.connectingMySQL = formatMessage("Connexion à une base de données SQLITE");
-
-indexController.connectMySQLSuccess = formatMessage("Base de données SQLITE connectée avec succès !");
-
-indexController.connectMySQLError = formatMessage("Une erreur s'est produite lors de la connexion à une base de données SQLITE :");
-
-updater.updateTooFast = formatMessage("Veuillez patienter au moins 5 minutes après le dernier commit pour mettre à jour sans erreur, %1 minutes %2 secondes restantes");
-
-updater.latestVersion = formatMessage("Vous utilisez la dernière version");
-
-updater.cantFindVersion = formatMessage("Vous utilisez une version non définie (%1), veuillez vérifier à nouveau votre fichier package.json");
-
-updater.newVersions = formatMessage("Il y a %1 nouvelles versions à mettre à jour, la mise à jour commence...");
-
-updater.updateSuccess = formatMessage("Mise à jour réussie%1");
-
-updater.configChanged = formatMessage("Le %1 a été modifié, veuillez vérifier à nouveau votre fichier config.json");
-
-updater.installingPackages = formatMessage("Installation des dépendances pour bot...");
-
-updater.installSuccess = formatMessage("Dépendances installées avec succès, redémarrez le bot pour utiliser la nouvelle version");
-
-updater.backupSuccess = formatMessage("Les fichiers modifiés ont été sauvegardés avec succès, voir dans le dossier %1");
-
-updater.restartToApply = formatMessage(". Redémarrez le bot pour appliquer la nouvelle version.");
-
-updater.skipFile = formatMessage("Il existe une nouvelle version du fichier %1, mais vous avez ignoré ce fichier pendant le processus de mise à jour avec le commentaire %2 dans ce fichier");
-
-verifyfbid.sendCode = formatMessage("Votre code de vérification est :\n%1\nLe code de vérification est valide pendant %2 minutes");
-
-utils.errorOccurred = formatMessage("â Œ Une erreur s'est produite :\n\n%1");
-
-command.restartedBot = formatMessage("Le bot a été redémarré");
-
-app.googleApiRefreshTokenExpired = formatMessage("Le jeton d'actualisation de l'API Google a expiré ou a été révoqué. Veuillez obtenir un nouveau jeton sur https://developers.google.com/oauthplayground/");
-
-app.tooManyRequests = formatMessage("Trop de requêtes à la dernière minute. Veuillez réessayer ultérieurement.");
-
-app.notPermissionChangeFbstate = formatMessage("Vous n'avez pas la permission de modifier fbstate !");
-
-app.notFoundFbstate = formatMessage("Veuillez saisir fbstate !");
-
-app.changedFbstateSuccess = formatMessage("L'état fbstate a été modifié avec succès !");
-
-app.serverError = formatMessage("Erreur du serveur, veuillez réessayer plus tard !");
+# SYSTEM MESSAGES
+new_version_detected=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Vous utilisez la version %1, la dernière version étant %2. Veuillez effectuer la mise à jour pour une meilleure utilisation du bot en saisissant la commande %3 dans la console/cmd.│╰──────⌾⋅ ⋅⌾──────╯
+auto_restart_1=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Le bot redémarrera automatiquement dans %1│╰──────⌾⋅ ⋅⌾──────╯
+auto_restart_2=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Le bot redémarrera automatiquement par une tâche cron : %1│╰──────⌾⋅ ⋅⌾──────╯
+google_token_expired=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Le jeton d'actualisation de l'API Google a expiré ou a été révoqué. Veuillez obtenir un nouveau jeton sur https://developers.google.com/oauthplayground/│╰──────⌾⋅ ⋅⌾──────╯
+too_old_version=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Vous utilisez une version trop ancienne de Goat-Bot, veuillez mettre à jour vers la dernière version en tapant la commande : %1 dans le cmd/console/terminal/shell│╰──────⌾⋅ ⋅⌾──────╯
+server_error=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Erreur du serveur, veuillez réessayer plus tard !│╰──────⌾⋅ ⋅⌾──────╯
+
+# LOGIN MESSAGES
+currently_logged=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Connexion en cours│╰──────⌾⋅ ⋅⌾──────╯
+file_not_found=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Impossible de trouver le fichier %1│╰──────⌾⋅ ⋅⌾──────╯
+login_token=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Connexion avec un jeton d'accès│╰──────⌾⋅ ⋅⌾──────╯
+login_cookie_string=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Connexion avec la chaîne de cookie│╰──────⌾⋅ ⋅⌾──────╯
+login_cookie_netscape=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Connexion avec cookie netscape│╰──────⌾⋅ ⋅⌾──────╯
+login_cookie_array=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Connexion avec un tableau de cookies│╰──────⌾⋅ ⋅⌾──────╯
+login_password=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Connexion avec email et mot de passe...│╰──────⌾⋅ ⋅⌾──────╯
+account_error=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Veuillez saisir le jeton d'autorisation complet sous la forme %1 ou le cookie sous la forme de chaîne %2 ou le cookie sous la forme de tableau :││[││ { nom : %3, valeur : %4 },││ { nom : %5, valeur : %6 }││]││ou││[││ { clé : %3, valeur : %4 },││ { clé : %5, valeur : %6 }││]││dans le fichier %7│╰──────⌾⋅ ⋅⌾──────╯
+cannot_find_account=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Impossible de trouver le compte Facebook, choisissez l'une des options suivantes (entrez le numéro à choisir ou appuyez vers le bas et vers le haut pour choisir et entrez pour confirmer) :│╰──────⌾⋅ ⋅⌾──────╯
+choose_account=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Connexion avec e-mail et mot de passe│╰──────⌾⋅ ⋅⌾──────╯
+choose_token=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Connexion avec autorisation complète du jeton│╰──────⌾⋅ ⋅⌾──────╯
+choose_cookie_string=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Connexion avec la chaîne de cookie│╰──────⌾⋅ ⋅⌾──────╯
+choose_cookie_array=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Connexion avec un tableau de cookies│╰──────⌾⋅ ⋅⌾──────╯
+login_with=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Vous choisissez de %1│╰──────⌾⋅ ⋅⌾──────╯
+input_email=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││> Veuillez saisir votre e-mail (id) ou votre numéro de téléphone compte Facebook :│╰──────⌾⋅ ⋅⌾──────╯
+input_password=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││> Veuillez saisir votre mot de passe :│╰──────⌾⋅ ⋅⌾──────╯
+input_2fa=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││> Veuillez saisir le code 2FA (laissez vide si vous n'avez pas activé 2FA) :│╰──────⌾⋅ ⋅⌾──────╯
+input_token=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││> Veuillez saisir l'autorisation complète de votre jeton (commencez par EAAAA) :│╰──────⌾⋅ ⋅⌾──────╯
+input_cookie_string=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││> Veuillez saisir votre chaîne de cookie :│╰──────⌾⋅ ⋅⌾──────╯
+input_cookie_array=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││> Veuillez saisir votre tableau de cookies :│╰──────⌾⋅ ⋅⌾──────╯
+refresh_cookie=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Actualisation du cookie...│╰──────⌾⋅ ⋅⌾──────╯
+refresh_cookie_error=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Une erreur s'est produite lors de l'actualisation du cookie│╰──────⌾⋅ ⋅⌾──────╯
+refresh_cookie_success=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Cookie actualisé avec succès, redémarrez le bot pour utiliser le nouveau cookie│╰──────⌾⋅ ⋅⌾──────╯
+refresh_cookie_warning=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Vous avez activé le mode de rafraîchissement automatique des cookies, mais vous n'avez pas configuré l'e-mail et le mot de passe dans le fichier config.json│╰──────⌾⋅ ⋅⌾──────╯
+token_error=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Le jeton est invalide ou a expiré. Veuillez saisir le jeton d'autorisation complet au format %1 dans le fichier %2.│╰──────⌾⋅ ⋅⌾──────╯
+cookie_error=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Le cookie n'est pas valide ou a expiré.│╰──────⌾⋅ ⋅⌾──────╯
+login_password_error=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Une erreur s'est produite lors de la connexion avec l'e-mail et le mot de passe dans config.json│╰──────⌾⋅ ⋅⌾──────╯
+login_success=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Connexion réussie│╰──────⌾⋅ ⋅⌾──────╯
+login_error=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Une erreur s'est produite lors de la connexion│╰──────⌾⋅ ⋅⌾──────╯
+open_dashboard_success=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Page de gestion des bots ouverte avec succès│╰──────⌾⋅ ⋅⌾──────╯
+open_dashboard_error=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Une erreur s'est produite lors de l'ouverture de la page de gestion du bot│╰──────⌾⋅ ⋅⌾──────╯
+change_gban_data=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││LES DONNÉES ONT ÉTÉ MODIFIÉES, IL EST ACTUELLEMENT IMPOSSIBLE DE LANCER UN BOT│╰──────⌾⋅ ⋅⌾──────╯
+error_noti=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Une erreur s'est produite lors de la récupération du message│╰──────⌾⋅ ⋅⌾──────╯
+refresh_fbstate_success=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Fichier %1 actualisé│╰──────⌾⋅ ⋅⌾──────╯
+refresh_fbstate_error=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Une erreur s'est produite lors de l'actualisation du fichier %1│╰──────⌾⋅ ⋅⌾──────╯
+you_are_banned=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Vous avez été banni du projet Goat-Bot│╰──────⌾⋅ ⋅⌾──────╯
+run_bot=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Lancer le bot avec succès, commencer à recevoir des messages des utilisateurs│╰──────⌾⋅ ⋅⌾──────╯
+not_logged_in=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Une erreur s'est produite, veuillez vérifier à nouveau votre compte Facebook│╰──────⌾⋅ ⋅⌾──────╯
+callback_error=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Une erreur s'est produite lors du rappel listenMqtt│╰──────⌾⋅ ⋅⌾──────╯
+user_banned=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Vous avez été banni de l'utilisation d'un bot !!│╰──────⌾⋅ ⋅⌾──────╯
+check_gban_error=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Une erreur s'est produite lors de la vérification du GBAN, essayez de mettre à jour la source vers la dernière version (ouvrez cmd et tapez : node update)│╰──────⌾⋅ ⋅⌾──────╯
+gban_message=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Vous avez été banni du projet Goat-Bot le %1 pour la raison : %2││» Heure : %3│╰──────⌾⋅ ⋅⌾──────╯
+gban_message_to_date=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Vous avez été banni du projet Goat-Bot le %1 pour la raison : %2││» Heure : %3││» À ce jour : %4│╰──────⌾⋅ ⋅⌾──────╯
+gban_admin_message=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││L'utilisateur %1 a été banni du projet Goat-Bot le %2 pour la raison : %3│╰──────⌾⋅ ⋅⌾──────╯
+open_server_uptime_success=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││🚀 Serveur de disponibilité ouvert : %1│╰──────⌾⋅ ⋅⌾──────╯
+open_server_uptime_error=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Une erreur s'est produite, impossible d'ouvrir le serveur uptime│╰──────⌾⋅ ⋅⌾──────╯
+restart_listen_message=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Redémarrage de ListenMQTT activé tous les %1│╰──────⌾⋅ ⋅⌾──────╯
+stop_restart_listen_message=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Redémarrage ListenMQTT désactivé│╰──────⌾⋅ ⋅⌾──────╯
+restart_listen_message_error=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Une erreur s'est produite lors du redémarrage de ListenMQTT│╰──────⌾⋅ ⋅⌾──────╯
+restart_listen_message_2=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││ListenMQTT redémarré avec succès│╰──────⌾⋅ ⋅⌾──────╯
+refresh_cookie_after=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Actualisation du cookie après %1│╰──────⌾⋅ ⋅⌾──────╯
+listen_mqtt_close=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││ListenMQTT fermé│╰──────⌾⋅ ⋅⌾──────╯
+listen_mqtt_close_by_user=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││ListenMQTT fermé par l'utilisateur│╰──────⌾⋅ ⋅⌾──────╯
+retry_check_live_cookie=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Nouvelle tentative de vérification du cookie... %1│╰──────⌾⋅ ⋅⌾──────╯
+start_bot_success=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Le bot a été démarré avec succès, commencez à recevoir des messages des utilisateurs│╰──────⌾⋅ ⋅⌾──────╯
+
+# DATABASE MESSAGES
+mongodb_connected=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Base de données MongoDB connectée avec succès !│╰──────⌾⋅ ⋅⌾──────╯
+mongodb_error=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Une erreur s'est produite lors de la connexion à la base de données Mongodb :│╰──────⌾⋅ ⋅⌾──────╯
+sqlite_connected=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Base de données SQLITE connectée avec succès !│╰──────⌾⋅ ⋅⌾──────╯
+sqlite_error=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Une erreur s'est produite lors de la connexion à une base de données SQLITE :│╰──────⌾⋅ ⋅⌾──────╯
+
+# COMMAND HANDLER MESSAGES
+command_not_found=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││La commande « %1 » n'existe pas, saisissez %2help pour voir toutes les commandes disponibles│╰──────⌾⋅ ⋅⌾──────╯
+command_syntax_error=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││La commande que vous utilisez a une syntaxe incorrecte, veuillez saisir %1help %2 pour voir les détails de l'utilisation de cette commande│╰──────⌾⋅ ⋅⌾──────╯
+only_admin=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││❌ | Seuls les administrateurs de groupe peuvent utiliser la commande « %1 »│╰──────⌾⋅ ⋅⌾──────╯
+only_admin_bot=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││❌ | Seul l'administrateur du bot peut utiliser la commande « %1 »│╰──────⌾⋅ ⋅⌾──────╯
+waiting_for_command=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││⏳ Vous êtes dans le délai d'attente pour utiliser cette commande, veuillez revenir après %1s│╰──────⌾⋅ ⋅⌾──────╯
+command_error=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││❌ [ %1 ]││Une erreur s'est produite lors de la commande « %2 »││││%3│╰──────⌾⋅ ⋅⌾──────╯
+
+# UPDATER MESSAGES
+update_available=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Il y a %1 nouvelles versions à mettre à jour, la mise à jour commence...│╰──────⌾⋅ ⋅⌾──────╯
+update_success=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Mise à jour réussie%1│╰──────⌾⋅ ⋅⌾──────╯
+update_too_fast=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Veuillez patienter au moins 5 minutes après le dernier commit pour mettre à jour sans erreur, %1 minutes %2 secondes restantes│╰──────⌾⋅ ⋅⌾──────╯
+latest_version=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Vous utilisez la dernière version│╰──────⌾⋅ ⋅⌾──────╯
+installing_packages=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Installation des dépendances pour bot...│╰──────⌾⋅ ⋅⌾──────╯
+install_success=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Dépendances installées avec succès, redémarrez le bot pour utiliser la nouvelle version│╰──────⌾⋅ ⋅⌾──────╯
+
+# MISC MESSAGES
+auto_uptime_turned_on=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Mode AutoUptime activé│╰──────⌾⋅ ⋅⌾──────╯
+verifyfbid_send_code=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Votre code de vérification est :││%1││Le code de vérification est valide pendant %2 minutes│╰──────⌾⋅ ⋅⌾──────╯
+command_restarted_bot=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Le bot a été redémarré│╰──────⌾⋅ ⋅⌾──────╯
+too_many_requests=╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮││Trop de requêtes à la dernière minute. Veuillez réessayer ultérieurement.│╰──────⌾⋅ ⋅⌾──────╯
