@@ -1,22 +1,22 @@
-const fs = require("fs-extra");
+€cmd install help.js const fs = require("fs-extra");
 const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "╭─⌾𝐁𝐎𝐓 𝐏𝐀𝐆𝐄  ⋅⌾──╮\n│\n│ https://www.facebook.com/profile.php?id=61568305950691 \n│\n╰─────────────⌾";
+const doNotDelete = "╭─⌾𝙱𝙾𝚃 𝙿𝙰𝙶𝙴  ⋅⌾──╮\n│\n│ https://www.facebook.com/profile.php?id=61568305950691 \n│\n╰─────────────⌾";
 
 function applyFont(text) {
   const fontMap = {
-    'A': '𝘈', 'B': '𝘉', 'C': '𝘊', 'D': '𝘋', 'E': '𝘌', 'F': '𝘍',
-    'G': '𝘎', 'H': '𝘏', 'I': '𝘐', 'J': '𝘑', 'K': '𝘒', 'L': '𝘓',
-    'M': '𝘔', 'N': '𝘕', 'O': '𝘖', 'P': '𝘗', 'Q': '𝘘', 'R': '𝘙',
-    'S': '𝘚', 'T': '𝘛', 'U': '𝘜', 'V': '𝘝', 'W': '𝘞', 'X': '𝘟',
-    'Y': '𝘠', 'Z': '𝘡',
-    'a': '𝘢', 'b': '𝘣', 'c': '𝘤', 'd': '𝘥', 'e': '𝘦', 'f': '𝘧',
-    'g': '𝘨', 'h': '𝘩', 'i': '𝘪', 'j': '𝘫', 'k': '𝘬', 'l': '𝘭',
-    'm': '𝘮', 'n': '𝘯', 'o': '𝘰', 'p': '𝘱', 'q': '𝘲', 'r': '𝘳',
-    's': '𝘴', 't': '𝘵', 'u': '𝘶', 'v': '𝘷', 'w': '𝘸', 'x': '𝘹',
-    'y': '𝘺', 'z': '𝘻'
+    'A': '𝙰', 'B': '𝙱', 'C': '𝙲', 'D': '𝙳', 'E': '𝙴', 'F': '𝙵',
+    'G': '𝙶', 'H': '𝙷', 'I': '𝙸', 'J': '𝙹', 'K': '𝙺', 'L': '𝙻',
+    'M': '𝙼', 'N': '𝙽', 'O': '𝙾', 'P': '𝙿', 'Q': '𝚀', 'R': '𝚁',
+    'S': '𝚂', 'T': '𝚃', 'U': '𝚄', 'V': '𝚅', 'W': '𝚆', 'X': '𝚇',
+    'Y': '𝚈', 'Z': '𝚉',
+    'a': '𝚊', 'b': '𝚋', 'c': '𝚌', 'd': '𝚍', 'e': '𝚎', 'f': '𝚏',
+    'g': '𝚐', 'h': '𝚑', 'i': '𝚒', 'j': '𝚓', 'k': '𝚔', 'l': '𝚕',
+    'm': '𝚖', 'n': '𝚗', 'o': '𝚘', 'p': '𝚙', 'q': '𝚚', 'r': '𝚛',
+    's': '𝚜', 't': '𝚝', 'u': '𝚞', 'v': '𝚟', 'w': '𝚠', 'x': '𝚡',
+    'y': '𝚢', 'z': '𝚣'
   };
   return text.split('').map(char => fontMap[char] || char).join('');
 }
@@ -24,8 +24,8 @@ function applyFont(text) {
 module.exports = {
   config: {
     name: "help",
-    version: "1.21",
-    author: "𝘔𝘦𝘴𝘴𝘪𝘦 𝘖𝘴𝘢𝘯𝘨𝘰",
+    version: "1.2",
+    author: "messie osango ",
     countDown: 5,
     role: 0,
     shortDescription: {
@@ -63,10 +63,10 @@ module.exports = {
         msg += `╭─⌾${formattedCategory}⋅⌾──╮\n│\n`;
 
         categories[category].commands.sort().forEach(name => {
-          msg += `│ ☾ ${applyFont(name)}\n`;
+          msg += `│ ✦ ${applyFont(name)}\n`;
         });
 
-        msg += `╰─────────────⌾\n`;
+        msg += `│\n╰─────────────⌾\n`;
       });
 
       const totalCommands = commands.size;
@@ -125,4 +125,4 @@ function roleTextToString(roleText) {
     case 2: return applyFont("Bot admins");
     default: return applyFont("Unknown");
   }
-        }
+}
