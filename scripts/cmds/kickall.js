@@ -3,7 +3,7 @@ const activeKickalls = new Map();
 module.exports = {
   config: {
     name: "kickall",
-    version: "2.2",
+    version: "2.3",
     author: "Messie Osango",
     role: 1,
     shortDescription: "Supprime tous les membres d'un groupe",
@@ -33,15 +33,14 @@ module.exports = {
       activeKickalls.set(targetThreadID, true);
 
       const botID = api.getCurrentUserID();
-      const adminID = event.senderID;
       const threadInfo = await api.getThreadInfo(targetThreadID);
-      const adminIDs = threadInfo.adminIDs.map(e => e.id);
+      const botIsAdmin = threadInfo.adminIDs.some(e => e.id == botID);
 
-      if (!adminIDs.includes(adminID)) {
-        return api.sendMessage("Vous n'avez pas les permissions nécessaires dans ce groupe.", event.threadID);
+      if (!botIsAdmin) {
+        return api.sendMessage("Le bot n'est pas administrateur dans ce groupe.", event.threadID);
       }
 
-      const members = threadInfo.participantIDs.filter(id => id !== botID && id !== adminID);
+      const members = threadInfo.participantIDs.filter(id => id !== botID && !global.GoatBot.config.adminBot.includes(id));
       if (members.length === 0) {
         return api.sendMessage("Aucun membre à supprimer dans ce groupe.", event.threadID);
       }
