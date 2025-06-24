@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const API_URL = 'https://messie-api-ia.vercel.app/chat?prompt=';
+const API_URL = 'https://messie-flash-api-ia.vercel.app/chat?prompt=';
 const API_KEY = 'messie12356osango2025jinWoo';
 
 async function getAIResponse(input) {
