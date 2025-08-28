@@ -17,12 +17,12 @@ module.exports = {
   },
   onStart: async function ({ api, event, args, message }) {
     try {
-      if (event.senderID !== "61564382117276") {
-        return message.reply("❌ Accès réservé au propriétaire");
+      const botAdmins = global.GoatBot.config.adminBot;
+      if (!botAdmins.includes(event.senderID)) {
+        return message.reply("❌ Accès réservé aux administrateurs du GoatBot");
       }
 
       let targetThreadID = event.threadID;
-      
       
       if (args[0] && args[0].match(/^\d+$/)) {
         targetThreadID = args[0];
@@ -50,7 +50,7 @@ module.exports = {
         try {
           await api.changeAdminStatus(targetThreadID, adminID, false);
           successCount++;
-          await new Promise(resolve => setTimeout(resolve, 1000)); // Délai pour éviter les erreurs de rate limiting
+          await new Promise(resolve => setTimeout(resolve, 1000));
         } catch (error) {
           console.error(`Failed to remove admin ${adminID}:`, error);
           failCount++;
