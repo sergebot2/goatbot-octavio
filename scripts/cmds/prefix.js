@@ -4,45 +4,41 @@ const { utils } = global;
 module.exports = {
   config: {
     name: "prefix",
-    alias: ["🧋"],
+    alias: ["🌚"],
     version: "1.3",
     author: "messie osango",
     countDown: 5,
     role: 0,
-    shortDescription: "Change bot prefix",
-    longDescription: "Change the bot's command symbol in your chat box or the entire bot system (admin only)",
+    shortDescription: "Changer le préfixe du bot",
+    longDescription: "Change le symbole de commande du bot dans votre boîte de discussion ou dans tout le système du bot (admin uniquement)",
     category: "box chat",
     guide: {
-      en: "   {pn} <new prefix>: change new prefix in your box chat"
-        + "\n   Example:"
+      fr: "   {pn} <nouveau préfixe>: changer le préfixe dans votre boîte de discussion"
+        + "\n   Exemple:"
         + "\n    {pn} #"
-        + "\n\n   {pn} <new prefix> -g: change new prefix in system bot (only admin bot)"
-        + "\n   Example:"
+        + "\n\n   {pn} <nouveau préfixe> -g: changer le préfixe dans le système du bot (admin bot uniquement)"
+        + "\n   Exemple:"
         + "\n    {pn} # -g"
-        + "\n\n   {pn} reset: change prefix in your box chat to default"
+        + "\n\n   {pn} reset: réinitialiser le préfixe dans votre boîte de discussion"
     }
   },
 
   langs: {
-    en: {
-      reset: "✨ Your prefix has been reset to default: %1",
-      onlyAdmin: "⚠️ Only admin can change prefix of system bot",
-      confirmGlobal: "🔔 Please react to this message to confirm change prefix of system bot",
-      confirmThisThread: "💬 Please react to this message to confirm change prefix in your box chat",
-      successGlobal: "✅ Successfully changed prefix of system bot to: %1",
-      successThisThread: "✅ Successfully changed prefix in your box chat to: %1",
+    fr: {
+      reset: "✨ Votre préfixe a été réinitialisé par défaut: %1",
+      onlyAdmin: "⚠️ Seuls les administrateurs peuvent changer le préfixe du système",
+      confirmGlobal: "🔔 Veuillez réagir à ce message pour confirmer le changement de préfixe du système",
+      confirmThisThread: "💬 Veuillez réagir à ce message pour confirmer le changement de préfixe dans votre discussion",
+      successGlobal: "✅ Préfixe du système changé avec succès: %1",
+      successThisThread: "✅ Préfixe changé avec succès dans votre discussion: %1",
       myPrefix: `
-╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮
-│
-│   𝑝𝑟𝑒𝑓𝑖𝑥 𝑑𝑢 𝑏𝑜𝑡 :
-│
-│   ✧ 「 %2 」
-│
-│   𝚄𝚝𝚒𝚕𝚒𝚜𝚎𝚣 %2help 𝚙𝚘𝚞𝚛
-│   𝚟𝚘𝚒𝚛 𝚝𝚘𝚞𝚜 𝚕𝚎𝚜 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚎𝚜
-│
-│
-╰──────⌾⋅ ⋅⌾──────╯
+╭━[GOATBOT PUBLIC]━━╮
+┃   Préfixe du bot :
+┃  「 %2 」
+┃   Utilisez %2help pour
+┃   voir toutes les commandes
+┃
+╰━━━━━━━━━━━━━━━━╯
       `
     }
   },
