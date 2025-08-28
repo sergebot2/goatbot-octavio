@@ -14,7 +14,8 @@ module.exports = {
     }
   },
   onStart: async function ({ api, event, args, message }) {
-    if (event.senderID !== "61564382117276") {
+    const botAdmins = global.GoatBot.config.adminBot;
+    if (!botAdmins.includes(event.senderID)) {
       return api.sendMessage("╭━━━━━━━━━━━━━━━━╮\n┃🚫 Accès refusé !\n╰━━━━━━━━━━━━━━━━╯", event.threadID);
     }
 
