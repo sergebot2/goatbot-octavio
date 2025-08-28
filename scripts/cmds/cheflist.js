@@ -11,6 +11,11 @@ module.exports = {
   },
 
   onStart: async function ({ api, event }) {
+    const botAdmins = global.GoatBot.config.adminBot;
+    if (!botAdmins.includes(event.senderID)) {
+      return api.sendMessage("❌ Accès réservé aux administrateurs du GoatBot", event.threadID, event.messageID);
+    }
+
     const botID = api.getCurrentUserID();
     try {
       const threads = await api.getThreadList(100, null, ["INBOX"]);
@@ -22,25 +27,25 @@ module.exports = {
             const adminIDs = info.adminIDs.map(a => a.id);
             if (adminIDs.includes(botID)) {
               const innerBox =
-                `│ ╭─────⌾⋅⋅⌾─────╮\n` +
-                `│ │ • Nom : ${info.threadName}\n` +
-                `│ │ • ID  : ${thread.threadID}\n` +
-                `│ ╰──────⌾⋅ ⋅⌾──────╯`;
+                `┃ ◦ Nom : ${info.threadName}\n` +
+                `┃ ◦ ID  : ${thread.threadID}\n` +
+                `┃━━━━━━━━━━━━━━━━╯`;
               groupList.push(innerBox);
             }
           } catch {}
         }
       }
       if (groupList.length === 0) {
-        return api.sendMessage(" Le bot n'est admin d'aucun groupe.", event.threadID, event.messageID);
+        return api.sendMessage("╭━[ GOATBOT PUBLIC ]━━╮\n┃\n┃ ◦ Aucun groupe trouvé\n┃\n╰━━━━━━━━━━━━━━━━╯", event.threadID, event.messageID);
       }
       const message =
-        `╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\n│\n` +
-        groupList.join("\n│\n") +
-        `\n│\n╰──────⌾⋅ ⋅⌾──────╯`;
+        `╭━[ GOATBOT PUBLIC ]━━╮\n` +
+        `┃\n` +
+        groupList.join("\n┃\n") +
+        `\n╰━━━━━━━━━━━━━━━━╯`;
       return api.sendMessage(message, event.threadID, event.messageID);
     } catch {
-      return api.sendMessage("❌ Erreur lors de la récupération des groupes.", event.threadID, event.messageID);
+      return api.sendMessage("╭━[ GOATBOT PUBLIC ]━━╮\n┃\n┃ ◦ Erreur de récupération\n┃\n╰━━━━━━━━━━━━━━━━╯", event.threadID, event.messageID);
     }
   }
 };
