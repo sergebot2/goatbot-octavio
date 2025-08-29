@@ -3,7 +3,7 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "╭─⌾𝙱𝙾𝚃 𝙿𝙰𝙶𝙴  ⋅⌾──╮\n│\n│ https://www.facebook.com/profile.php?id=61568305950691 \n│\n╰─────────────⌾";
+const doNotDelete = "╭━[ GOATBOT PUBLIC ]━━╮\n╰━━━━━━━━━━━━━━━━╯";
 
 function applyFont(text) {
   const fontMap = {
@@ -47,7 +47,7 @@ module.exports = {
 
     if (args.length === 0) {
       const categories = {};
-      let msg = `╭─⌾${applyFont("COMMAND LIST")}⋅⌾──╮\n│\n│  ${applyFont("SATORU GOJO BOT")}\n│\n╰─────────────⌾\n`;
+      let msg = `╭━[ ${applyFont("COMMAND LIST")} ]━━╮\n┃\n┃  ${applyFont("GOATBOT PUBLIC")}\n┃\n╰━━━━━━━━━━━━━━━━╯\n`;
 
       for (const [name, value] of commands) {
         if (value.config.role > role) continue;
@@ -60,22 +60,22 @@ module.exports = {
 
       Object.keys(categories).sort().forEach(category => {
         const formattedCategory = applyFont(category.toUpperCase());
-        msg += `╭─⌾${formattedCategory}⋅⌾──╮\n│\n`;
+        msg += `╭━[ ${formattedCategory} ]━━╮\n┃\n`;
 
         categories[category].commands.sort().forEach(name => {
-          msg += `│ ✦ ${applyFont(name)}\n`;
+          msg += `┃ ✦ ${applyFont(name)}\n`;
         });
 
-        msg += `│\n╰─────────────⌾\n`;
+        msg += `┃\n╰━━━━━━━━━━━━━━━━╯\n`;
       });
 
       const totalCommands = commands.size;
-      msg += `╭─⌾${applyFont("INFORMATION")}⋅⌾──╮\n│\n`;
-      msg += `│ ${applyFont("TOTAL COMMANDS")}: ${totalCommands}\n`;
-      msg += `│ ${applyFont("PREFIX")}: ${prefix}\n`;
-      msg += `│\n│ ${applyFont("Type")} ${prefix}help cmd_name\n`;
-      msg += `│ ${applyFont("to view command details")}\n│\n`;
-      msg += `╰─────────────⌾\n`;
+      msg += `╭━[ ${applyFont("INFORMATION")} ]━━╮\n┃\n`;
+      msg += `┃ ${applyFont("TOTAL COMMANDS")}: ${totalCommands}\n`;
+      msg += `┃ ${applyFont("PREFIX")}: ${prefix}\n`;
+      msg += `┃\n┃ ${applyFont("Type")} ${prefix}help cmd_name\n`;
+      msg += `┃ ${applyFont("to view command details")}\n┃\n`;
+      msg += `╰━━━━━━━━━━━━━━━━╯\n`;
       msg += doNotDelete;
 
       await message.reply({ body: msg });
@@ -84,7 +84,7 @@ module.exports = {
       const command = commands.get(commandName) || commands.get(aliases.get(commandName));
 
       if (!command) {
-        await message.reply(`╭─⌾${applyFont("ERROR")}⋅⌾──╮\n│\n│ ${applyFont("Command not found")}\n│\n╰─────────────⌾`);
+        await message.reply(`╭━[ ${applyFont("ERROR")} ]━━╮\n┃\n┃ ${applyFont("Command not found")}\n┃\n╰━━━━━━━━━━━━━━━━╯`);
       } else {
         const configCommand = command.config;
         const roleText = roleTextToString(configCommand.role);
@@ -94,23 +94,23 @@ module.exports = {
         const guideBody = configCommand.guide?.en || "No guide available.";
         const usage = guideBody.replace(/{p}/g, prefix).replace(/{n}/g, configCommand.name);
 
-        const response = `╭─⌾${applyFont("COMMAND INFO")}⋅⌾──╮
-│
-│ ${applyFont("NAME")}: ${configCommand.name}
-│ ${applyFont("VERSION")}: ${configCommand.version || "1.0"}
-│ ${applyFont("AUTHOR")}: ${applyFont(author)}
-│
-│ ${applyFont("DESCRIPTION")}:
-│ ${longDescription}
-│
-│ ${applyFont("USAGE")}:
-│ ${usage}
-│
-│ ${applyFont("ALIASES")}: ${configCommand.aliases ? configCommand.aliases.map(a => applyFont(a)).join(", ") : "None"}
-│ ${applyFont("ROLE")}: ${roleText}
-│ ${applyFont("COOLDOWN")}: ${configCommand.countDown || 2}s
-│
-╰─────────────⌾`;
+        const response = `╭━[ ${applyFont("COMMAND INFO")} ]━━╮
+┃
+┃ ${applyFont("NAME")}: ${configCommand.name}
+┃ ${applyFont("VERSION")}: ${configCommand.version || "1.0"}
+┃ ${applyFont("AUTHOR")}: ${applyFont(author)}
+┃
+┃ ${applyFont("DESCRIPTION")}:
+┃ ${longDescription}
+┃
+┃ ${applyFont("USAGE")}:
+┃ ${usage}
+┃
+┃ ${applyFont("ALIASES")}: ${configCommand.aliases ? configCommand.aliases.map(a => applyFont(a)).join(", ") : "None"}
+┃ ${applyFont("ROLE")}: ${roleText}
+┃ ${applyFont("COOLDOWN")}: ${configCommand.countDown || 2}s
+┃
+╰━━━━━━━━━━━━━━━━╯`;
 
         await message.reply(response);
       }
@@ -125,4 +125,4 @@ function roleTextToString(roleText) {
     case 2: return applyFont("Bot admins");
     default: return applyFont("Unknown");
   }
-}
+            }
