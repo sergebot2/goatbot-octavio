@@ -1,152 +1,140 @@
-Goat.newVersionDetected = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nVous utilisez la version %1, la dernière version étant %2. Veuillez effectuer la mise à jour pour une meilleure utilisation du bot en saisissant la commande %3 dans la console/cmd.\n╰──────⌾⋅ ⋅⌾──────╯
-Goat.autoRestart1 = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nLe bot redémarrera automatiquement dans %1\n╰──────⌾⋅ ⋅⌾──────╯
-Goat.autoRestart2 = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nLe bot redémarrera automatiquement par une tâche cron : %1\n╰──────⌾⋅ ⋅⌾──────╯
-Goat.googleApiTokenExpired = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nLe jeton d'actualisation de l'API Google a expiré ou a été révoqué. Veuillez obtenir un nouveau jeton sur https://developers.google.com/oauthplayground/\n╰──────⌾⋅ ⋅⌾──────╯
+Goat.newVersionDetected = ╭━[ GOATBOT PUBLIC ]━━╮\nVous utilisez la version %1, la dernière version étant %2. Veuillez effectuer la mise à jour pour une meilleure utilisation du bot en saisissant la commande %3 dans la console/cmd.\n╰━━━━━━━━━━━━━━━━╯
+Goat.autoRestart1 = ╭━[ GOATBOT PUBLIC ]━━╮\nLe bot redémarrera automatiquement dans %1\n╰━━━━━━━━━━━━━━━━╯
+Goat.autoRestart2 = ╭━[ GOATBOT PUBLIC ]━━╮\nLe bot redémarrera automatiquement par une tâche cron : %1\n╰━━━━━━━━━━━━━━━━╯
+Goat.googleApiTokenExpired = ╭━[ GOATBOT PUBLIC ]━━╮\nLe jeton d'actualisation de l'API Google a expiré ou a été révoqué. Veuillez obtenir un nouveau jeton sur https://developers.google.com/oauthplayground/\n╰━━━━━━━━━━━━━━━━╯
 
-login.currentlyLogged = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nConnexion en cours\n╰──────⌾⋅ ⋅⌾──────╯
-login.notFoundDirAccount = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nImpossible de trouver le fichier %1\n╰──────⌾⋅ ⋅⌾──────╯
-login.loginToken = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nConnexion avec un jeton d'accès\n╰──────⌾⋅ ⋅⌾──────╯
-login.loginCookieString = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nConnexion avec la chaîne de cookie\n╰──────⌾⋅ ⋅⌾──────╯
-login.loginCookieNetscape = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nConnexion avec cookie netscape\n╰──────⌾⋅ ⋅⌾──────╯
-login.loginCookieArray = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nConnexion avec un tableau de cookies\n╰──────⌾⋅ ⋅⌾──────╯
-login.loginPassword = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nConnexion avec email et mot de passe...\n╰──────⌾⋅ ⋅⌾──────╯
-login.accountError = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nVeuillez saisir le jeton d'autorisation complet sous la forme %1 ou le cookie sous la forme de chaîne %2 ou le cookie sous la forme de tableau :\n[\n { nom : %3, valeur : %4 },\n { nom : %5, valeur : %6 }\n]\n ou\n[\n { clé : %3, valeur : %4 },\n { clé : %5, valeur : %6 }\n]\ndans le fichier %7\n╰──────⌾⋅ ⋅⌾──────╯
-login.cannotFindAccount = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nImpossible de trouver le compte Facebook, choisissez l'une des options suivantes (entrez le numéro à choisir ou appuyez vers le bas et vers le haut pour choisir et entrez pour confirmer) :\n╰──────⌾⋅ ⋅⌾──────╯
-login.chooseAccount = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nConnexion avec e-mail et mot de passe\n╰──────⌾⋅ ⋅⌾──────╯
-login.chooseToken = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nConnexion avec autorisation complète du jeton\n╰──────⌾⋅ ⋅⌾──────╯
-login.chooseCookieString = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nConnexion avec la chaîne de cookie\n╰──────⌾⋅ ⋅⌾──────╯
-login.chooseCookieArray = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nConnexion avec un tableau de cookies\n╰──────⌾⋅ ⋅⌾──────╯
-login.loginWith = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nVous choisissez de %1\n╰──────⌾⋅ ⋅⌾──────╯
-login.inputEmail = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\n> Veuillez saisir votre e-mail (id) ou votre numéro de téléphone compte Facebook :\n╰──────⌾⋅ ⋅⌾──────╯
-login.inputPassword = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\n> Veuillez saisir votre mot de passe :\n╰──────⌾⋅ ⋅⌾──────╯
-login.input2FA = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\n> Veuillez saisir le code 2FA (laissez vide si vous n'avez pas activé 2FA) :\n╰──────⌾⋅ ⋅⌾──────╯
-login.inputToken = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\n> Veuillez saisir l'autorisation complète de votre jeton (commencez par EAAAA) :\n╰──────⌾⋅ ⋅⌾──────╯
-login.inputCookieString = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\n> Veuillez saisir votre chaîne de cookie :\n╰──────⌾⋅ ⋅⌾──────╯
-login.inputCookieArray = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\n> Veuillez saisir votre tableau de cookies :\n╰──────⌾⋅ ⋅⌾──────╯
-login.refreshCookie = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nActualisation du cookie...\n╰──────⌾⋅ ⋅⌾──────╯
-login.refreshCookieError = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nUne erreur s'est produite lors de l'actualisation du cookie\n╰──────⌾⋅ ⋅⌾──────╯
-login.refreshCookieSuccess = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nCookie actualisé avec succès, redémarrez le bot pour utiliser le nouveau cookie\n╰──────⌾⋅ ⋅⌾──────╯
-login.refreshCookieWarning = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nVous avez activé le mode de rafraîchissement automatique des cookies, mais vous n'avez pas configuré l'e-mail et le mot de passe dans le fichier config.json\n╰──────⌾⋅ ⋅⌾──────╯
-login.tokenError = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nLe jeton est invalide ou a expiré. Veuillez saisir le jeton d'autorisation complet au format %1 dans le fichier %2.\n╰──────⌾⋅ ⋅⌾──────╯
-login.cookieError = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nLe cookie n'est pas valide ou a expiré.\n╰──────⌾⋅ ⋅⌾──────╯
-login.loginPasswordError = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nUne erreur s'est produite lors de la connexion avec l'e-mail et le mot de passe dans config.json\n╰──────⌾⋅ ⋅⌾──────╯
-login.loginSuccess = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nConnexion réussie\n╰──────⌾⋅ ⋅⌾──────╯
-login.loginError = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nUne erreur s'est produite lors de la connexion\n╰──────⌾⋅ ⋅⌾──────╯
-login.openDashboardSuccess = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nPage de gestion des bots ouverte avec succès\n╰──────⌾⋅ ⋅⌾──────╯
-login.openDashboardError = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nUne erreur s'est produite lors de l'ouverture de la page de gestion du bot\n╰──────⌾⋅ ⋅⌾──────╯
-login.changeGbanData = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nLES DONNÉES ONT ÉTÉ MODIFIÉES, IL EST ACTUELLEMENT IMPOSSIBLE DE LANCER UN BOT\n╰──────⌾⋅ ⋅⌾──────╯
-login.errorNoti = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nUne erreur s'est produite lors de la récupération du message\n╰──────⌾⋅ ⋅⌾──────╯
-login.refreshFbstateSuccess = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nFichier %1 actualisé\n╰──────⌾⋅ ⋅⌾──────╯
-login.refreshFbstateError = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nUne erreur s'est produite lors de l'actualisation du fichier %1\n╰──────⌾⋅ ⋅⌾──────╯
-login.youAreBanned = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nVous avez été banni du projet Goat-Bot\n╰──────⌾⋅ ⋅⌾──────╯
-login.runBot = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nLancer le bot avec succès, commencer à recevoir des messages des utilisateurs\n╰──────⌾⋅ ⋅⌾──────╯
-login.notLoggedIn = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nUne erreur s'est produite, veuillez vérifier à nouveau votre compte Facebook\n╰──────⌾⋅ ⋅⌾──────╯
-login.callBackError = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nUne erreur s'est produite lors du rappel listenMqtt\n╰──────⌾⋅ ⋅⌾──────╯
-login.userBanned = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nVous avez été banni de l'utilisation d'un bot !!\n╰──────⌾⋅ ⋅⌾──────╯
-login.checkGbanError = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nUne erreur s'est produite lors de la vérification du GBAN, essayez de mettre à jour la source vers la dernière version (ouvrez cmd et tapez : node update)\n╰──────⌾⋅ ⋅⌾──────╯
-login.gbanMessage = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nVous avez été banni du projet Goat-Bot le %1 pour la raison : %2\n» Heure : %3\n╰──────⌾⋅ ⋅⌾──────╯
-login.gbanMessageToDate = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nVous avez été banni du projet Goat-Bot le %1 pour la raison : %2\n» Heure : %3\n» À ce jour : %4\n╰──────⌾⋅ ⋅⌾──────╯
-login.gbanAdminMessage = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nL'utilisateur %1 a été banni du projet Goat-Bot le %2 pour la raison : %3\n╰──────⌾⋅ ⋅⌾──────╯
-login.openServerUptimeSuccess = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nðŸš€ Serveur de disponibilité ouvert : %1\n╰──────⌾⋅ ⋅⌾──────╯
-login.openServerUptimeError = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nUne erreur s'est produite, impossible d'ouvrir le serveur uptime\n╰──────⌾⋅ ⋅⌾──────╯
-login.restartListenMessage = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nRedémarrage de ListenMQTT activé tous les %1\n╰──────⌾⋅ ⋅⌾──────╯
-login.stopRestartListenMessage = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nRedémarrage ListenMQTT désactivé\n╰──────⌾⋅ ⋅⌾──────╯
-login.restartListenMessageError = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nUne erreur s'est produite lors du redémarrage de ListenMQTT\n╰──────⌾⋅ ⋅⌾──────╯
-login.restartListenMessage2 = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nListenMQTT redémarré avec succès\n╰──────⌾⋅ ⋅⌾──────╯
-login.refreshCookieAfter = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nActualisation du cookie après %1\n╰──────⌾⋅ ⋅⌾──────╯
-login.listenMqttClose = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nListenMQTT fermé\n╰──────⌾⋅ ⋅⌾──────╯
-login.listenMqttCloseByUser = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nListenMQTT fermé par l'utilisateur\n╰──────⌾⋅ ⋅⌾──────╯
-login.retryCheckLiveCookie = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nNouvelle tentative de vérification du cookie... %1\n╰──────⌾⋅ ⋅⌾──────╯
-login.startBotSuccess = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nLe bot a été démarré avec succès, commencez à recevoir des messages des utilisateurs\n╰──────⌾⋅ ⋅⌾──────╯
+login.currentlyLogged = ╭━[ GOATBOT PUBLIC ]━━╮\nConnexion en cours\n╰━━━━━━━━━━━━━━━━╯
+login.notFoundDirAccount = ╭━[ GOATBOT PUBLIC ]━━╮\nImpossible de trouver le fichier %1\n╰━━━━━━━━━━━━━━━━╯
+login.loginToken = ╭━[ GOATBOT PUBLIC ]━━╮\nConnexion avec un jeton d'accès\n╰━━━━━━━━━━━━━━━━╯
+login.loginCookieString = ╭━[ GOATBOT PUBLIC ]━━╮\nConnexion avec la chaîne de cookie\n╰━━━━━━━━━━━━━━━━╯
+login.loginCookieNetscape = ╭━[ GOATBOT PUBLIC ]━━╮\nConnexion avec cookie netscape\n╰━━━━━━━━━━━━━━━━╯
+login.loginCookieArray = ╭━[ GOATBOT PUBLIC ]━━╮\nConnexion avec un tableau de cookies\n╰━━━━━━━━━━━━━━━━╯
+login.loginPassword = ╭━[ GOATBOT PUBLIC ]━━╮\nConnexion avec email et mot de passe...\n╰━━━━━━━━━━━━━━━━╯
+login.accountError = ╭━[ GOATBOT PUBLIC ]━━╮\nVeuillez saisir le jeton d'autorisation complet sous la forme %1 ou le cookie sous la forme de chaîne %2 ou le cookie sous la forme de tableau :\n[\n { nom : %3, valeur : %4 },\n { nom : %5, valeur : %6 }\n]\n ou\n[\n { clé : %3, valeur : %4 },\n { clé : %5, valeur : %6 }\n]\ndans le fichier %7\n╰━━━━━━━━━━━━━━━━╯
+login.cannotFindAccount = ╭━[ GOATBOT PUBLIC ]━━╮\nImpossible de trouver le compte Facebook, choisissez l'une des options suivantes (entrez le numéro à choisir ou appuyez vers le bas et vers le haut pour choisir et entrez pour confirmer) :\n╰━━━━━━━━━━━━━━━━╯
+login.chooseAccount = ╭━[ GOATBOT PUBLIC ]━━╮\nConnexion avec e-mail et mot de passe\n╰━━━━━━━━━━━━━━━━╯
+login.chooseToken = ╭━[ GOATBOT PUBLIC ]━━╮\nConnexion avec autorisation complète du jeton\n╰━━━━━━━━━━━━━━━━╯
+login.chooseCookieString = ╭━[ GOATBOT PUBLIC ]━━╮\nConnexion avec la chaîne de cookie\n╰━━━━━━━━━━━━━━━━╯
+login.chooseCookieArray = ╭━[ GOATBOT PUBLIC ]━━╮\nConnexion avec un tableau de cookies\n╰━━━━━━━━━━━━━━━━╯
+login.loginWith = ╭━[ GOATBOT PUBLIC ]━━╮\nVous choisissez de %1\n╰━━━━━━━━━━━━━━━━╯
+login.inputEmail = ╭━[ GOATBOT PUBLIC ]━━╮\n> Veuillez saisir votre e-mail (id) ou votre numéro de téléphone compte Facebook :\n╰━━━━━━━━━━━━━━━━╯
+login.inputPassword = ╭━[ GOATBOT PUBLIC ]━━╮\n> Veuillez saisir votre mot de passe :\n╰━━━━━━━━━━━━━━━━╯
+login.input2FA = ╭━[ GOATBOT PUBLIC ]━━╮\n> Veuillez saisir le code 2FA (laissez vide si vous n'avez pas activé 2FA) :\n╰━━━━━━━━━━━━━━━━╯
+login.inputToken = ╭━[ GOATBOT PUBLIC ]━━╮\n> Veuillez saisir l'autorisation complète de votre jeton (commencez par EAAAA) :\n╰━━━━━━━━━━━━━━━━╯
+login.inputCookieString = ╭━[ GOATBOT PUBLIC ]━━╮\n> Veuillez saisir votre chaîne de cookie :\n╰━━━━━━━━━━━━━━━━╯
+login.inputCookieArray = ╭━[ GOATBOT PUBLIC ]━━╮\n> Veuillez saisir votre tableau de cookies :\n╰━━━━━━━━━━━━━━━━╯
+login.refreshCookie = ╭━[ GOATBOT PUBLIC ]━━╮\nActualisation du cookie...\n╰━━━━━━━━━━━━━━━━╯
+login.refreshCookieError = ╭━[ GOATBOT PUBLIC ]━━╮\nUne erreur s'est produite lors de l'actualisation du cookie\n╰━━━━━━━━━━━━━━━━╯
+login.refreshCookieSuccess = ╭━[ GOATBOT PUBLIC ]━━╮\nCookie actualisé avec succès, redémarrez le bot pour utiliser le nouveau cookie\n╰━━━━━━━━━━━━━━━━╯
+login.refreshCookieWarning = ╭━[ GOATBOT PUBLIC ]━━╮\nVous avez activé le mode de rafraîchissement automatique des cookies, mais vous n'avez pas configuré l'e-mail et le mot de passe dans le fichier config.json\n╰━━━━━━━━━━━━━━━━╯
+login.tokenError = ╭━[ GOATBOT PUBLIC ]━━╮\nLe jeton est invalide ou a expiré. Veuillez saisir le jeton d'autorisation complet au format %1 dans le fichier %2.\n╰━━━━━━━━━━━━━━━━╯
+login.cookieError = ╭━[ GOATBOT PUBLIC ]━━╮\nLe cookie n'est pas valide ou a expiré.\n╰━━━━━━━━━━━━━━━━╯
+login.loginPasswordError = ╭━[ GOATBOT PUBLIC ]━━╮\nUne erreur s'est produite lors de la connexion avec l'e-mail et le mot de passe dans config.json\n╰━━━━━━━━━━━━━━━━╯
+login.loginSuccess = ╭━[ GOATBOT PUBLIC ]━━╮\nConnexion réussie\n╰━━━━━━━━━━━━━━━━╯
+login.loginError = ╭━[ GOATBOT PUBLIC ]━━╮\nUne erreur s'est produite lors de la connexion\n╰━━━━━━━━━━━━━━━━╯
+login.openDashboardSuccess = ╭━[ GOATBOT PUBLIC ]━━╮\nPage de gestion des bots ouverte avec succès\n╰━━━━━━━━━━━━━━━━╯
+login.openDashboardError = ╭━[ GOATBOT PUBLIC ]━━╮\nUne erreur s'est produite lors de l'ouverture de la page de gestion du bot\n╰━━━━━━━━━━━━━━━━╯
+login.changeGbanData = ╭━[ GOATBOT PUBLIC ]━━╮\nLES DONNÉES ONT ÉTÉ MODIFIÉES, IL EST ACTUELLEMENT IMPOSSIBLE DE LANCER UN BOT\n╰━━━━━━━━━━━━━━━━╯
+login.errorNoti = ╭━[ GOATBOT PUBLIC ]━━╮\nUne erreur s'est produite lors de la récupération du message\n╰━━━━━━━━━━━━━━━━╯
+login.refreshFbstateSuccess = ╭━[ GOATBOT PUBLIC ]━━╮\nFichier %1 actualisé\n╰━━━━━━━━━━━━━━━━╯
+login.refreshFbstateError = ╭━[ GOATBOT PUBLIC ]━━╮\nUne erreur s'est produite lors de l'actualisation du fichier %1\n╰━━━━━━━━━━━━━━━━╯
+login.youAreBanned = ╭━[ GOATBOT PUBLIC ]━━╮\nVous avez été banni du projet Goat-Bot\n╰━━━━━━━━━━━━━━━━╯
+login.runBot = ╭━[ GOATBOT PUBLIC ]━━╮\nLancer le bot avec succès, commencer à recevoir des messages des utilisateurs\n╰━━━━━━━━━━━━━━━━╯
+login.notLoggedIn = ╭━[ GOATBOT PUBLIC ]━━╮\nUne erreur s'est produite, veuillez vérifier à nouveau votre compte Facebook\n╰━━━━━━━━━━━━━━━━╯
+login.callBackError = ╭━[ GOATBOT PUBLIC ]━━╮\nUne erreur s'est produite lors du rappel listenMqtt\n╰━━━━━━━━━━━━━━━━╯
+login.userBanned = ╭━[ GOATBOT PUBLIC ]━━╮\nVous avez été banni de l'utilisation d'un bot !!\n╰━━━━━━━━━━━━━━━━╯
+login.checkGbanError = ╭━[ GOATBOT PUBLIC ]━━╮\nUne erreur s'est produite lors de la vérification du GBAN, essayez de mettre à jour la source vers la dernière version (ouvrez cmd et tapez : node update)\n╰━━━━━━━━━━━━━━━━╯
+login.gbanMessage = ╭━[ GOATBOT PUBLIC ]━━╮\nVous avez été banni du projet Goat-Bot le %1 pour la raison : %2\n» Heure : %3\n╰━━━━━━━━━━━━━━━━╯
+login.gbanMessageToDate = ╭━[ GOATBOT PUBLIC ]━━╮\nVous avez été banni du projet Goat-Bot le %1 pour la raison : %2\n» Heure : %3\n» À ce jour : %4\n╰━━━━━━━━━━━━━━━━╯
+login.gbanAdminMessage = ╭━[ GOATBOT PUBLIC ]━━╮\nL'utilisateur %1 a été banni du projet Goat-Bot le %2 pour la raison : %3\n╰━━━━━━━━━━━━━━━━╯
+login.openServerUptimeSuccess = ╭━[ GOATBOT PUBLIC ]━━╮\nServeur de disponibilité ouvert : %1\n╰━━━━━━━━━━━━━━━━╯
+login.openServerUptimeError = ╭━[ GOATBOT PUBLIC ]━━╮\nUne erreur s'est produite, impossible d'ouvrir le serveur uptime\n╰━━━━━━━━━━━━━━━━╯
+login.restartListenMessage = ╭━[ GOATBOT PUBLIC ]━━╮\nRedémarrage de ListenMQTT activé tous les %1\n╰━━━━━━━━━━━━━━━━╯
+login.stopRestartListenMessage = ╭━[ GOATBOT PUBLIC ]━━╮\nRedémarrage ListenMQTT désactivé\n╰━━━━━━━━━━━━━━━━╯
+login.restartListenMessageError = ╭━[ GOATBOT PUBLIC ]━━╮\nUne erreur s'est produite lors du redémarrage de ListenMQTT\n╰━━━━━━━━━━━━━━━━╯
+login.restartListenMessage2 = ╭━[ GOATBOT PUBLIC ]━━╮\nListenMQTT redémarré avec succès\n╰━━━━━━━━━━━━━━━━╯
+login.refreshCookieAfter = ╭━[ GOATBOT PUBLIC ]━━╮\nActualisation du cookie après %1\n╰━━━━━━━━━━━━━━━━╯
+login.listenMqttClose = ╭━[ GOATBOT PUBLIC ]━━╮\nListenMQTT fermé\n╰━━━━━━━━━━━━━━━━╯
+login.listenMqttCloseByUser = ╭━[ GOATBOT PUBLIC ]━━╮\nListenMQTT fermé par l'utilisateur\n╰━━━━━━━━━━━━━━━━╯
+login.retryCheckLiveCookie = ╭━[ GOATBOT PUBLIC ]━━╮\nNouvelle tentative de vérification du cookie... %1\n╰━━━━━━━━━━━━━━━━╯
+login.startBotSuccess = ╭━[ GOATBOT PUBLIC ]━━╮\nLe bot a été démarré avec succès, commencez à recevoir des messages des utilisateurs\n╰━━━━━━━━━━━━━━━━╯
 
-version.tooOldVersion = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nVous utilisez une version trop ancienne de Goat-Bot, veuillez mettre à jour vers la dernière version en tapant la commande : %1 dans le cmd/console/terminal/shell\n╰──────⌾⋅ ⋅⌾──────╯
+version.tooOldVersion = ╭━[ GOATBOT PUBLIC ]━━╮\nVous utilisez une version trop ancienne de Goat-Bot, veuillez mettre à jour vers la dernière version en tapant la commande : %1 dans le cmd/console/terminal/shell\n╰━━━━━━━━━━━━━━━━╯
 
+custom.refreshedFb_dtsg = ╭━[ GOATBOT PUBLIC ]━━╮\nFb_dtsg et jazoest actualisés avec succès\n╰━━━━━━━━━━━━━━━━╯
+custom.refreshedFb_dtsgError = ╭━[ GOATBOT PUBLIC ]━━╮\nUne erreur s'est produite lors de l'actualisation de fb_dtsg et jazoest\n╰━━━━━━━━━━━━━━━━╯
 
-custom.refreshedFb_dtsg = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nFb_dtsg et jazoest actualisés avec succès\n╰──────⌾⋅ ⋅⌾──────╯
-custom.refreshedFb_dtsgError = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nUne erreur s'est produite lors de l'actualisation de fb_dtsg et jazoest\n╰──────⌾⋅ ⋅⌾──────╯
+loadData.loadThreadDataSuccess = ╭━[ GOATBOT PUBLIC ]━━╮\nLes données du groupe %1 ont été chargées avec succès !\n╰━━━━━━━━━━━━━━━━╯
+loadData.loadUserDataSuccess = ╭━[ GOATBOT PUBLIC ]━━╮\nChargement réussi des données de l'utilisateur %1 !\n╰━━━━━━━━━━━━━━━━╯
+loadData.refreshingThreadData = ╭━[ GOATBOT PUBLIC ]━━╮\nMise à jour des informations des groupes...\n╰━━━━━━━━━━━━━━━━╯
+loadData.refreshThreadDataSuccess = ╭━[ GOATBOT PUBLIC ]━━╮\nInformations mises à jour du groupe %1 !\n╰━━━━━━━━━━━━━━━━╯
+loadData.refreshThreadDataError = ╭━[ GOATBOT PUBLIC ]━━╮\nUne erreur s'est produite lors de la mise à jour des informations des groupes !\n╰━━━━━━━━━━━━━━━━╯
 
+loadScripts.loadScriptsError = ╭━[ GOATBOT PUBLIC ]━━╮\nLes fichiers %1 présentent une erreur lors du chargement :\n╰━━━━━━━━━━━━━━━━╯
+loadScripts.loadScriptsNotMatchOrigin = ╭━[ GOATBOT PUBLIC ]━━╮\nLes fichiers %1 ne correspondent pas aux fichiers d'origine du projet github, assurez-vous que ces fichiers de commandes sont fiables :\n╰━━━━━━━━━━━━━━━━╯
+loadScripts.NOT_FOUND = ╭━[ GOATBOT PUBLIC ]━━╮\nINTROUVABLE DANS LE CODE SOURCE ORIGINAL :\n╰━━━━━━━━━━━━━━━━╯
+loadScripts.NOT_MATCH = ╭━[ GOATBOT PUBLIC ]━━╮\nNE CORRESPOND PAS AU CODE SOURCE ORIGINAL :\n╰━━━━━━━━━━━━━━━━╯
 
-loadData.loadThreadDataSuccess = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nLes données du groupe %1 ont été chargées avec succès !\n╰──────⌾⋅ ⋅⌾──────╯
-loadData.loadUserDataSuccess = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nChargement réussi des données de l'utilisateur %1 !\n╰──────⌾⋅ ⋅⌾──────╯
-loadData.refreshingThreadData = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nMise à jour des informations des groupes...\n╰──────⌾⋅ ⋅⌾──────╯
-loadData.refreshThreadDataSuccess = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nInformations mises à jour du groupe %1 !\n╰──────⌾⋅ ⋅⌾──────╯
-loadData.refreshThreadDataError = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nUne erreur s'est produite lors de la mise à jour des informations des groupes !\n╰──────⌾⋅ ⋅⌾──────╯
+socketIO.connected = ╭━[ GOATBOT PUBLIC ]━━╮\nConnecté au serveur socket.io\n╰━━━━━━━━━━━━━━━━╯
+socketIO.error = ╭━[ GOATBOT PUBLIC ]━━╮\nUne erreur s'est produite lors de la connexion au serveur socket.io\n╰━━━━━━━━━━━━━━━━╯
 
+handlerCheckData.cantCreateThread = ╭━[ GOATBOT PUBLIC ]━━╮\nLes groupes avec l'ID '%1' ne peuvent pas être écrits dans la base de données !\n╰━━━━━━━━━━━━━━━━╯
+handlerCheckData.cantCreateUser = ╭━[ GOATBOT PUBLIC ]━━╮\nLes utilisateurs avec l'ID '%1' ne peuvent pas être écrits dans la base de données !\n╰━━━━━━━━━━━━━━━━╯
 
-loadScripts.loadScriptsError = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nLes fichiers %1 présentent une erreur lors du chargement :\n╰──────⌾⋅ ⋅⌾──────╯
-loadScripts.loadScriptsNotMatchOrigin = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nLes fichiers %1 ne correspondent pas aux fichiers d'origine du projet github, assurez-vous que ces fichiers de commandes sont fiables :\n╰──────⌾⋅ ⋅⌾──────╯
-loadScripts.NOT_FOUND = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nINTROUVABLE DANS LE CODE SOURCE ORIGINAL :\n╰──────⌾⋅ ⋅⌾──────╯
-loadScripts.NOT_MATCH = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nNE CORRESPOND PAS AU CODE SOURCE ORIGINAL :\n╰──────⌾⋅ ⋅⌾──────╯
+handlerEvents.userBanned = ╭━[ GOATBOT PUBLIC ]━━╮\nVous avez été banni de l'utilisation du bot\n» Raison : %1\n» Heure : %2\n» ID utilisateur : %3\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.threadBanned = ╭━[ GOATBOT PUBLIC ]━━╮\nCe groupe a été banni de l'utilisation du bot\n» Raison : %1\n» Heure : %2\n» ID du fil de discussion : %3\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.onlyAdminBox = ╭━[ GOATBOT PUBLIC ]━━╮\nCe groupe est actuellement activé, seuls les administrateurs de groupe peuvent utiliser le bot\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.onlyAdminBot = ╭━[ GOATBOT PUBLIC ]━━╮\nActuellement, seul l'administrateur du bot peut utiliser le bot\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.commandNotFound = ╭━[ GOATBOT PUBLIC ]━━╮\nLa commande « %1 » n'existe pas, saisissez %2help pour voir toutes les commandes disponibles\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.commandNotFound2 = ╭━[ GOATBOT PUBLIC ]━━╮\nLa commande que vous utilisez n'existe pas, tapez %1help pour voir toutes les commandes disponibles\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.commandSyntaxError = ╭━[ GOATBOT PUBLIC ]━━╮\nLa commande que vous utilisez a une syntaxe incorrecte, veuillez saisir %1help %2 pour voir les détails de l'utilisation de cette commande\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.onlyAdmin = ╭━[ GOATBOT PUBLIC ]━━╮\nSeuls les administrateurs de groupe peuvent utiliser la commande « %1 »\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.onlyAdminToUseOnReply = ╭━[ GOATBOT PUBLIC ]━━╮\nSeuls les administrateurs de groupe peuvent utiliser la fonction de réponse de la commande « %1 »\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.onlyAdminToUseOnReaction = ╭━[ GOATBOT PUBLIC ]━━╮\nSeuls les administrateurs de groupe peuvent utiliser la fonction de réaction de la commande « %1 »\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.onlyAdminBot2 = ╭━[ GOATBOT PUBLIC ]━━╮\nSeul l'administrateur du bot peut utiliser la commande « %1 »\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.onlyAdminBot2ToUseOnReply = ╭━[ GOATBOT PUBLIC ]━━╮\nSeul l'administrateur du bot peut utiliser la fonction de réponse de la commande « %1 »\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.onlyAdminBot2ToUseOnReaction = ╭━[ GOATBOT PUBLIC ]━━╮\nSeul l'administrateur du bot peut utiliser la fonction de réaction de la commande « %1 »\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.waitingForCommand = ╭━[ GOATBOT PUBLIC ]━━╮\nVous êtes dans le délai d'attente pour utiliser cette commande, veuillez revenir après %1s\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.errorOccurred = ╭━[ GOATBOT PUBLIC ]━━╮\n[ %1 ]\nUne erreur s'est produite lors de la commande « %2 »\n\n%3\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.errorOccurred2 = ╭━[ GOATBOT PUBLIC ]━━╮\n[ %1 ]\nUne erreur s'est produite lors de la commande onChat dans la commande « %2 »\n\n%3\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.errorOccurred3 = ╭━[ GOATBOT PUBLIC ]━━╮\n[ %1 ]\nUne erreur s'est produite lors de l'exécution de onReply à la commande « %2 »\n\n%3\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.errorOccurred4 = ╭━[ GOATBOT PUBLIC ]━━╮\n[ %1 ]\nUne erreur s'est produite lors de l'exécution de onReaction à la commande « %2 »\n\n%3\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.errorOccurred5 = ╭━[ GOATBOT PUBLIC ]━━╮\n[ %1 ]\nUne erreur s'est produite lors de l'exécution de onEvent à la commande « %2 »\n\n%3\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.errorOccurred6 = ╭━[ GOATBOT PUBLIC ]━━╮\n[ %1 ]\nUne erreur s'est produite lors de l'exécution de onEvent à la commande « %2 »\n\n%3\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.errorOccurred7 = ╭━[ GOATBOT PUBLIC ]━━╮\n[ %1 ]\nUne erreur s'est produite lors de l'exécution de onAnyEvent à la commande « %2 »\n\n%3\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.cannotFindCommandName = ╭━[ GOATBOT PUBLIC ]━━╮\nImpossible de trouver le nom de la commande pour exécuter cette réponse !\n╰━━━━━━━━━━━━━━━━╯
+handlerEvents.cannotFindCommand = ╭━[ GOATBOT PUBLIC ]━━╮\nImpossible de trouver la commande « %1 » pour exécuter cette réponse !\n╰━━━━━━━━━━━━━━━━╯
 
+autoUptime.autoUptimeTurnedOn = ╭━[ GOATBOT PUBLIC ]━━╮\nMode AutoUptime activé\n╰━━━━━━━━━━━━━━━━╯
 
-socketIO.connected = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nConnecté au serveur socket.io\n╰──────⌾⋅ ⋅⌾──────╯
-socketIO.error = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nUne erreur s'est produite lors de la connexion au serveur socket.io\n╰──────⌾⋅ ⋅⌾──────╯
+indexController.connectingMongoDB = ╭━[ GOATBOT PUBLIC ]━━╮\nConnexion à une base de données MONGODB\n╰━━━━━━━━━━━━━━━━╯
+indexController.connectMongoDBSuccess = ╭━[ GOATBOT PUBLIC ]━━╮\nBase de données MongoDB connectée avec succès !\n╰━━━━━━━━━━━━━━━━╯
+indexController.connectMongoDBError = ╭━[ GOATBOT PUBLIC ]━━╮\nUne erreur s'est produite lors de la connexion à la base de données Mongodb :\n╰━━━━━━━━━━━━━━━━╯
+indexController.connectingMySQL = ╭━[ GOATBOT PUBLIC ]━━╮\nConnexion à une base de données SQLITE\n╰━━━━━━━━━━━━━━━━╯
+indexController.connectMySQLSuccess = ╭━[ GOATBOT PUBLIC ]━━╮\nBase de données SQLITE connectée avec succès !\n╰━━━━━━━━━━━━━━━━╯
+indexController.connectMySQLError = ╭━[ GOATBOT PUBLIC ]━━╮\nUne erreur s'est produite lors de la connexion à une base de données SQLITE :\n╰━━━━━━━━━━━━━━━━╯
 
+updater.updateTooFast = ╭━[ GOATBOT PUBLIC ]━━╮\nVeuillez patienter au moins 5 minutes après le dernier commit pour mettre à jour sans erreur, %1 minutes %2 secondes restantes\n╰━━━━━━━━━━━━━━━━╯
+updater.latestVersion = ╭━[ GOATBOT PUBLIC ]━━╮\nVous utilisez la dernière version\n╰━━━━━━━━━━━━━━━━╯
+updater.cantFindVersion = ╭━[ GOATBOT PUBLIC ]━━╮\nVous utilisez une version non définie (%1), veuillez vérifier à nouveau votre fichier package.json\n╰━━━━━━━━━━━━━━━━╯
+updater.newVersions = ╭━[ GOATBOT PUBLIC ]━━╮\nIl y a %1 nouvelles versions à mettre à jour, la mise à jour commence...\n╰━━━━━━━━━━━━━━━━╯
+updater.updateSuccess = ╭━[ GOATBOT PUBLIC ]━━╮\nMise à jour réussie%1\n╰━━━━━━━━━━━━━━━━╯
+updater.configChanged = ╭━[ GOATBOT PUBLIC ]━━╮\nLe %1 a été modifié, veuillez vérifier à nouveau votre fichier config.json\n╰━━━━━━━━━━━━━━━━╯
+updater.installingPackages = ╭━[ GOATBOT PUBLIC ]━━╮\nInstallation des dépendances pour bot...\n╰━━━━━━━━━━━━━━━━╯
+updater.installSuccess = ╭━[ GOATBOT PUBLIC ]━━╮\nDépendances installées avec succès, redémarrez le bot pour utiliser la nouvelle version\n╰━━━━━━━━━━━━━━━━╯
+updater.backupSuccess = ╭━[ GOATBOT PUBLIC ]━━╮\nLes fichiers modifiés ont été sauvegardés avec succès, voir dans le dossier %1\n╰━━━━━━━━━━━━━━━━╯
+updater.restartToApply = ╭━[ GOATBOT PUBLIC ]━━╮\n. Redémarrez le bot pour appliquer la nouvelle version.\n╰━━━━━━━━━━━━━━━━╯
+updater.skipFile = ╭━[ GOATBOT PUBLIC ]━━╮\nIl existe une nouvelle version du fichier %1, mais vous avez ignoré ce fichier pendant le processus de mise à jour avec le commentaire %2 dans ce fichier\n╰━━━━━━━━━━━━━━━━╯
 
-handlerCheckData.cantCreateThread = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nLes groupes avec l'ID '%1' ne peuvent pas être écrits dans la base de données !\n╰──────⌾⋅ ⋅⌾──────╯
-handlerCheckData.cantCreateUser = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nLes utilisateurs avec l'ID '%1' ne peuvent pas être écrits dans la base de données !\n╰──────⌾⋅ ⋅⌾──────╯
+verifyfbid.sendCode = ╭━[ GOATBOT PUBLIC ]━━╮\nVotre code de vérification est :\n%1\nLe code de vérification est valide pendant %2 minutes\n╰━━━━━━━━━━━━━━━━╯
 
+utils.errorOccurred = ╭━[ GOATBOT PUBLIC ]━━╮\nUne erreur s'est produite :\n\n%1\n╰━━━━━━━━━━━━━━━━╯
 
-handlerEvents.userBanned = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nVous avez été banni de l'utilisation du bot\n» Raison : %1\n» Heure : %2\n» ID utilisateur : %3\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.threadBanned = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nCe groupe a été banni de l'utilisation du bot\n» Raison : %1\n» Heure : %2\n» ID du fil de discussion : %3\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.onlyAdminBox = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nCe groupe est actuellement activé, seuls les administrateurs de groupe peuvent utiliser le bot\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.onlyAdminBot = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nâ Œ | Actuellement, seul l'administrateur du bot peut utiliser le bot\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.commandNotFound = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nLa commande « %1 » n'existe pas, saisissez %2help pour voir toutes les commandes disponibles\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.commandNotFound2 = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nLa commande que vous utilisez n'existe pas, tapez %1help pour voir toutes les commandes disponibles\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.commandSyntaxError = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nLa commande que vous utilisez a une syntaxe incorrecte, veuillez saisir %1help %2 pour voir les détails de l'utilisation de cette commande\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.onlyAdmin = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nâ Œ | Seuls les administrateurs de groupe peuvent utiliser la commande « %1 »\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.onlyAdminToUseOnReply = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nâ Œ | Seuls les administrateurs de groupe peuvent utiliser la fonction de réponse de la commande « %1 »\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.onlyAdminToUseOnReaction = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nâ Œ | Seuls les administrateurs de groupe peuvent utiliser la fonction de réaction de la commande « %1 »\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.onlyAdminBot2 = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nâ Œ | Seul l'administrateur du bot peut utiliser la commande « %1 »\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.onlyAdminBot2ToUseOnReply = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nâ Œ | Seul l'administrateur du bot peut utiliser la fonction de réponse de la commande « %1 »\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.onlyAdminBot2ToUseOnReaction = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nâ Œ | Seul l'administrateur du bot peut utiliser la fonction de réaction de la commande « %1 »\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.waitingForCommand = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nâ ± Vous êtes dans le délai d'attente pour utiliser cette commande, veuillez revenir après %1s\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.errorOccurred = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nâ Œ [ %1 ]\nUne erreur s'est produite lors de la commande « %2 »\n\n%3\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.errorOccurred2 = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nâ Œ [ %1 ]\nUne erreur s'est produite lors de la commande onChat dans la commande « %2 »\n\n%3\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.errorOccurred3 = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nâ Œ [ %1 ]\nUne erreur s'est produite lors de l'exécution de onReply à la commande « %2 »\n\n%3\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.errorOccurred4 = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nâ Œ [ %1 ]\nUne erreur s'est produite lors de l'exécution de onReaction à la commande « %2 »\n\n%3\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.errorOccurred5 = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nâ Œ [ %1 ]\nUne erreur s'est produite lors de l'exécution de onEvent à la commande « %2 »\n\n%3\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.errorOccurred6 = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nâ Œ [ %1 ]\nUne erreur s'est produite lors de l'exécution de onEvent à la commande « %2 »\n\n%3\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.errorOccurred7 = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nâ Œ [ %1 ]\nUne erreur s'est produite lors de l'exécution de onAnyEvent à la commande « %2 »\n\n%3\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.cannotFindCommandName = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nâ Œ Impossible de trouver le nom de la commande pour exécuter cette réponse !\n╰──────⌾⋅ ⋅⌾──────╯
-handlerEvents.cannotFindCommand = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nâ Œ Impossible de trouver la commande « %1 » pour exécuter cette réponse !\n╰──────⌾⋅ ⋅⌾──────╯
+command.restartedBot = ╭━[ GOATBOT PUBLIC ]━━╮\nLe bot a été redémarré\n╰━━━━━━━━━━━━━━━━╯
 
-
-autoUptime.autoUptimeTurnedOn = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nMode AutoUptime activé\n╰──────⌾⋅ ⋅⌾──────╯
-
-
-indexController.connectingMongoDB = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nConnexion à une base de données MONGODB\n╰──────⌾⋅ ⋅⌾──────╯
-indexController.connectMongoDBSuccess = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nBase de données MongoDB connectée avec succès !\n╰──────⌾⋅ ⋅⌾──────╯
-indexController.connectMongoDBError = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nUne erreur s'est produite lors de la connexion à la base de données Mongodb :\n╰──────⌾⋅ ⋅⌾──────╯
-indexController.connectingMySQL = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nConnexion à une base de données SQLITE\n╰──────⌾⋅ ⋅⌾──────╯
-indexController.connectMySQLSuccess = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nBase de données SQLITE connectée avec succès !\n╰──────⌾⋅ ⋅⌾──────╯
-indexController.connectMySQLError = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nUne erreur s'est produite lors de la connexion à une base de données SQLITE :\n╰──────⌾⋅ ⋅⌾──────╯
-
-
-updater.updateTooFast = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nVeuillez patienter au moins 5 minutes après le dernier commit pour mettre à jour sans erreur, %1 minutes %2 secondes restantes\n╰──────⌾⋅ ⋅⌾──────╯
-updater.latestVersion = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nVous utilisez la dernière version\n╰──────⌾⋅ ⋅⌾──────╯
-updater.cantFindVersion = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nVous utilisez une version non définie (%1), veuillez vérifier à nouveau votre fichier package.json\n╰──────⌾⋅ ⋅⌾──────╯
-updater.newVersions = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nIl y a %1 nouvelles versions à mettre à jour, la mise à jour commence...\n╰──────⌾⋅ ⋅⌾──────╯
-updater.updateSuccess = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nMise à jour réussie%1\n╰──────⌾⋅ ⋅⌾──────╯
-updater.configChanged = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nLe %1 a été modifié, veuillez vérifier à nouveau votre fichier config.json\n╰──────⌾⋅ ⋅⌾──────╯
-updater.installingPackages = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nInstallation des dépendances pour bot...\n╰──────⌾⋅ ⋅⌾──────╯
-updater.installSuccess = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nDépendances installées avec succès, redémarrez le bot pour utiliser la nouvelle version\n╰──────⌾⋅ ⋅⌾──────╯
-updater.backupSuccess = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nLes fichiers modifiés ont été sauvegardés avec succès, voir dans le dossier %1\n╰──────⌾⋅ ⋅⌾──────╯
-updater.restartToApply = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\n. Redémarrez le bot pour appliquer la nouvelle version.\n╰──────⌾⋅ ⋅⌾──────╯
-updater.skipFile = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nIl existe une nouvelle version du fichier %1, mais vous avez ignoré ce fichier pendant le processus de mise à jour avec le commentaire %2 dans ce fichier\n╰──────⌾⋅ ⋅⌾──────╯
-
-
-verifyfbid.sendCode = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nVotre code de vérification est :\n%1\nLe code de vérification est valide pendant %2 minutes\n╰──────⌾⋅ ⋅⌾──────╯
-
-utils.errorOccurred = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nâ Œ Une erreur s'est produite :\n\n%1\n╰──────⌾⋅ ⋅⌾──────╯
-
-
-command.restartedBot = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nLe bot a été redémarré\n╰──────⌾⋅ ⋅⌾──────╯
-
-
-app.googleApiRefreshTokenExpired = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nLe jeton d'actualisation de l'API Google a expiré ou a été révoqué. Veuillez obtenir un nouveau jeton sur https://developers.google.com/oauthplayground/\n╰──────⌾⋅ ⋅⌾──────╯
-app.tooManyRequests = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nTrop de requêtes à la dernière minute. Veuillez réessayer ultérieurement.\n╰──────⌾⋅ ⋅⌾──────╯
-app.notPermissionChangeFbstate = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nVous n'avez pas la permission de modifier fbstate !\n╰──────⌾⋅ ⋅⌾──────╯
-app.notFoundFbstate = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nVeuillez saisir fbstate !\n╰──────⌾⋅ ⋅⌾──────╯
-app.changedFbstateSuccess = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nL'état fbstate a été modifié avec succès !\n╰──────⌾⋅ ⋅⌾──────╯
-app.serverError = ╭─⌾⋅𝑆𝐴𝑇𝑂𝑅𝑈 𝐵𝑂𝑇⋅⌾──╮\nErreur du serveur, veuillez réessayer plus tard !\n╰──────⌾⋅ ⋅⌾──────╯
+app.googleApiRefreshTokenExpired = ╭━[ GOATBOT PUBLIC ]━━╮\nLe jeton d'actualisation de l'API Google a expiré ou a été révoqué. Veuillez obtenir un nouveau jeton sur https://developers.google.com/oauthplayground/\n╰━━━━━━━━━━━━━━━━╯
+app.tooManyRequests = ╭━[ GOATBOT PUBLIC ]━━╮\nTrop de requêtes à la dernière minute. Veuillez réessayer ultérieurement.\n╰━━━━━━━━━━━━━━━━╯
+app.notPermissionChangeFbstate = ╭━[ GOATBOT PUBLIC ]━━╮\nVous n'avez pas la permission de modifier fbstate !\n╰━━━━━━━━━━━━━━━━╯
+app.notFoundFbstate = ╭━[ GOATBOT PUBLIC ]━━╮\nVeuillez saisir fbstate !\n╰━━━━━━━━━━━━━━━━╯
+app.changedFbstateSuccess = ╭━[ GOATBOT PUBLIC ]━━╮\nL'état fbstate a été modifié avec succès !\n╰━━━━━━━━━━━━━━━━╯
+app.serverError = ╭━[ GOATBOT PUBLIC ]━━╮\nErreur du serveur, veuillez réessayer plus tard !\n╰━━━━━━━━━━━━━━━━╯
