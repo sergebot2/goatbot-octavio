@@ -2,31 +2,39 @@ module.exports = {
   config: {
     name: "notification",
     aliases: ["noti"],
-    version: "2.1",
-    author: "Messie Osango",
+    version: "2.4",
+    author: "Octavio Wina",
     role: 2,
     shortDescription: "Notification globale",
-    longDescription: "Envoi de message à tous les groupes",
+    longDescription: "Envoie un message à tous les groupes où le bot est présent",
     category: "system",
     guide: {
-      en: "{pn} [message]",
-      fr: "{pn} [message]"
+      fr: "{pn} [message]",
+      en: "{pn} [message]"
     }
   },
+
   onStart: async function ({ api, event, args, message }) {
-    const botAdmins = global.GoatBot.config.adminBot;
+    const botAdmins = global.GoatBot.config.adminBot || [];
+
     if (!botAdmins.includes(event.senderID)) {
-      return api.sendMessage("╭━━━━━━━━━━━━━━━━╮\n┃🚫 Accès refusé !\n╰━━━━━━━━━━━━━━━━╯", event.threadID);
+      return api.sendMessage(
+        `╔════════════════════╗
+║ 🚫 ACCÈS REFUSÉ ! ║
+╚════════════════════╝`,
+        event.threadID
+      );
     }
 
-    if (args.length === 0) {
-      return message.reply(`╭━━━━━━━━━━━━━━━━╮
-┃  GUIDE D'UTILISATION 
-├────────────────
-┃ Usage: 
-┃ • notification [message]
-┃ • noti [message]
-╰━━━━━━━━━━━━━━━━╯`);
+    if (!args.length) {
+      return message.reply(
+        `╔════════════════════╗
+║ 📖 GUIDE D'UTILISATION ║
+╠────────────────────╣
+║ • notification [message] ║
+║ • noti [message]         ║
+╚════════════════════╝`
+      );
     }
 
     const userMessage = args.join(" ");
@@ -35,8 +43,13 @@ module.exports = {
       const threadList = await api.getThreadList(100, null, ["INBOX"]);
       const groupThreads = threadList.filter(thread => thread.isGroup);
 
-      if (groupThreads.length === 0) {
-        return api.sendMessage("╭━━━━━━━━━━━━━━━━╮\n┃ Aucun groupe trouvé\n╰━━━━━━━━━━━━━━━━╯", event.threadID);
+      if (!groupThreads.length) {
+        return api.sendMessage(
+          `╔════════════════════╗
+║ ⚠ AUCUN GROUPE TROUVÉ ║
+╚════════════════════╝`,
+          event.threadID
+        );
       }
 
       let successCount = 0;
@@ -44,31 +57,43 @@ module.exports = {
 
       for (const group of groupThreads) {
         try {
-          await api.sendMessage(`╭━━━━━━━━━━━━━━━━╮
-┃  NOTIFICATION  
-├────────────────
-┃ ${userMessage}
-╰━━━━━━━━━━━━━━━━╯`, group.threadID);
+          await api.sendMessage(
+            `╔════════════════════╗
+║ 📣 NOTIFICATION ║
+╠────────────────────╣
+║ ${userMessage}
+╚════════════════════╝`,
+            group.threadID
+          );
           successCount++;
-          await new Promise(resolve => setTimeout(resolve, 300));
-        } catch (error) {
+          await new Promise(res => setTimeout(res, 300));
+        } catch {
           failCount++;
         }
       }
 
-      await api.sendMessage(`╭━━━━━━━━━━━━━━━━╮
-┃  RAPPORT D'ENVOI  
-├────────────────
-┃ ✅ ${successCount} groupes atteints
-┃ ❌ ${failCount} échecs d'envoi
-├────────────────
-┃ Message diffusé:
-┃ "${userMessage}"
-╰━━━━━━━━━━━━━━━━╯`, event.threadID);
+      await api.sendMessage(
+        `╔════════════════════╗
+║ 📊 RAPPORT D'ENVOI ║
+╠────────────────────╣
+║ ✅ Groupes atteints: ${successCount}
+║ ❌ Échecs: ${failCount}
+╠────────────────────╣
+║ Message diffusé:
+║ "${userMessage}"
+╚════════════════════╝`,
+        event.threadID
+      );
 
     } catch (error) {
       console.error(error);
-      api.sendMessage("╭━━━━━━━━━━━━━━━━╮\n┃❌ Erreur du système\n╰━━━━━━━━━━━━━━━━╯", event.threadID);
+      api.sendMessage(
+        `╔════════════════════╗
+║ ❌ ERREUR DU SYSTÈME ║
+╚════════════════════╝`,
+        event.threadID
+      );
     }
   }
 };
+     
