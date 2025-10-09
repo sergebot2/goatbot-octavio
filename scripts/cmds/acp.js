@@ -1,16 +1,15 @@
-
 const moment = require("moment-timezone");
 
 module.exports = {
   config: {
     name: "accept",
     aliases: ['acp'],
-    version: "1.2",
-    author: "Messie Osango",
+    version: "1.4",
+    author: "Octavio Wina",
     countDown: 8,
     role: 2,
-    shortDescription: "accept users",
-    longDescription: "accept users",
+    shortDescription: "Accepte ou supprime des demandes d'amis",
+    longDescription: "Gère les demandes d'amis Facebook automatiquement ou manuellement",
     category: "owner"
   },
 
@@ -27,7 +26,7 @@ module.exports = {
         input: {
           source: "friends_tab",
           actor_id: api.getCurrentUserID(),
-          client_mutation_id: Math.round(Math.random() * 19).toString()
+          client_mutation_id: Math.floor(Math.random() * 10000).toString()
         },
         scale: 3,
         refresh_num: 0
@@ -44,51 +43,47 @@ module.exports = {
       form.fb_api_req_friendly_name = "FriendingCometFriendRequestDeleteMutation";
       form.doc_id = "4108254489275063";
     } else {
-      return api.sendMessage("Please select <add | del > <target number | or \"all\">", event.threadID, event.messageID);
+      return api.sendMessage("╭━━━━━[ ⚠️ INSTRUCTION ]━━━━━╮\n💬 Utilisez : add <n°> | del <n°> | all\n╰━━━━━━━━━━━━━━━━━━━━╯", event.threadID, event.messageID);
     }
 
     let targetIDs = args.slice(1);
-    if (args[1] === "all") {
-      targetIDs = [];
-      const lengthList = listRequest.length;
-      for (let i = 1; i <= lengthList; i++) targetIDs.push(i);
-    }
+    if (args[1] === "all") targetIDs = listRequest.map((_, i) => i + 1);
 
-    const newTargetIDs = [];
+    const newTargets = [];
     const promiseFriends = [];
 
     for (const stt of targetIDs) {
       const u = listRequest[parseInt(stt) - 1];
       if (!u) {
-        failed.push(`Can't find stt ${stt} in the list`);
+        failed.push(`Impossible de trouver l'entrée n°${stt}`);
         continue;
       }
       form.variables.input.friend_requester_id = u.node.id;
       form.variables = JSON.stringify(form.variables);
-      newTargetIDs.push(u);
+      newTargets.push(u);
       promiseFriends.push(api.httpPost("https://www.facebook.com/api/graphql/", form));
       form.variables = JSON.parse(form.variables);
     }
 
-    const lengthTarget = newTargetIDs.length;
-    for (let i = 0; i < lengthTarget; i++) {
+    for (let i = 0; i < newTargets.length; i++) {
       try {
-        const friendRequest = await promiseFriends[i];
-        if (JSON.parse(friendRequest).errors) {
-          failed.push(newTargetIDs[i].node.name);
-        } else {
-          success.push(newTargetIDs[i].node.name);
-        }
-      } catch (e) {
-        failed.push(newTargetIDs[i].node.name);
+        const res = await promiseFriends[i];
+        if (JSON.parse(res).errors) failed.push(newTargets[i].node.name);
+        else success.push(newTargets[i].node.name);
+      } catch {
+        failed.push(newTargets[i].node.name);
       }
     }
 
     if (success.length > 0) {
-      api.sendMessage(`» ${args[0] === 'add' ? 'Accepté' : 'Supprimé'} : ${success.length} utilisateurs :\n\n${success.join("\n")}${failed.length > 0 ? `\n\nÉchecs : ${failed.join("\n")}` : ""}`, event.threadID, event.messageID);
+      api.sendMessage(
+        `╭━━━━━[ ✅ ${args[0] === 'add' ? 'Accepté' : 'Supprimé'} ]━━━━━╮\n👤 Utilisateurs traités : ${success.length}\n\n${success.join("\n")}${failed.length ? `\n\n❌ Échecs : ${failed.join("\n")}` : ""}\n╰━━━━━━━━━━━━━━━━━━━━╯`,
+        event.threadID,
+        event.messageID
+      );
     } else {
       api.unsendMessage(messageID);
-      return api.sendMessage("Réponse invalide.", event.threadID);
+      return api.sendMessage("╭━━━━━[ ⚠️ ERREUR ]━━━━━╮\n💀 Réponse invalide.\n╰━━━━━━━━━━━━━━━━━━━━╯", event.threadID);
     }
 
     api.unsendMessage(messageID);
@@ -113,7 +108,7 @@ module.exports = {
           input: {
             source: "friends_tab",
             actor_id: api.getCurrentUserID(),
-            client_mutation_id: Math.round(Math.random() * 19).toString()
+            client_mutation_id: Math.floor(Math.random() * 10000).toString()
           },
           scale: 3,
           refresh_num: 0
@@ -131,7 +126,7 @@ module.exports = {
         try {
           await api.httpPost("https://www.facebook.com/api/graphql/", formAccept);
           success.push(user.node.name);
-        } catch (e) {
+        } catch {
           failed.push(user.node.name);
         }
         formAccept.variables = JSON.parse(formAccept.variables);
@@ -139,7 +134,10 @@ module.exports = {
 
       const adminIDs = global.GoatBot.config.adminBot || [];
       for (const adminID of adminIDs) {
-        api.sendMessage(`» Accept automatique de ${success.length} demandes :\n\n${success.join("\n")}${failed.length > 0 ? `\n\nÉchecs : ${failed.join("\n")}` : ""}`, adminID);
+        api.sendMessage(
+          `╭━━━━━[ 🤖 ACCEPT AUTOMATIQUE ]━━━━━╮\n👤 Nombre de demandes acceptées : ${success.length}\n\n${success.join("\n")}${failed.length ? `\n\n❌ Échecs : ${failed.join("\n")}` : ""}\n╰━━━━━━━━━━━━━━━━━━━━╯`,
+          adminID
+        );
       }
 
       return;
@@ -148,24 +146,25 @@ module.exports = {
     if (!global.GoatBot.config.adminBot.includes(event.senderID)) return;
 
     let msg = "";
-    let i = 0;
-    for (const user of listRequest) {
-      i++;
-      msg += (`\n${i}. Name: ${user.node.name}` +
-        `\nID: ${user.node.id}` +
-        `\nUrl: ${user.node.url.replace("www.facebook", "fb")}` +
-        `\nTime: ${moment(user.time * 1009).tz("Asia/Manila").format("DD/MM/YYYY HH:mm:ss")}\n`);
-    }
-    api.sendMessage(`${msg}\nRépondez à ce message avec : add <n°> ou del <n°>`, event.threadID, (e, info) => {
-      global.GoatBot.onReply.set(info.messageID, {
-        commandName,
-        messageID: info.messageID,
-        listRequest,
-        author: event.senderID,
-        unsendTimeout: setTimeout(() => {
-          api.unsendMessage(info.messageID);
-        }, this.config.countDown * 1000)
-      });
-    }, event.messageID);
+    listRequest.forEach((user, i) => {
+      msg += `\n${i + 1}. Nom : ${user.node.name}\nID : ${user.node.id}\nUrl : ${user.node.url.replace("www.facebook", "fb")}\nTime : ${moment(user.time * 1000).tz("Asia/Manila").format("DD/MM/YYYY HH:mm:ss")}\n`;
+    });
+
+    api.sendMessage(
+      `╭━━━━━[ 📥 DEMANDES D'AMIS ]━━━━━╮${msg}\n╰━━━━━━━━━━━━━━━━━━━━╯\nRépondez à ce message avec : add <n°> ou del <n°>`,
+      event.threadID,
+      (e, info) => {
+        global.GoatBot.onReply.set(info.messageID, {
+          commandName,
+          messageID: info.messageID,
+          listRequest,
+          author: event.senderID,
+          unsendTimeout: setTimeout(() => api.unsendMessage(info.messageID), this.config.countDown * 1000)
+        });
+      },
+      event.messageID
+    );
   }
 };
+
+    
