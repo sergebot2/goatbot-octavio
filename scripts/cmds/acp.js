@@ -5,7 +5,7 @@ module.exports = {
     name: "accept",
     aliases: ['acp'],
     version: "1.4",
-    author: "Octavio Wina",
+    author: "messie osango ",
     countDown: 8,
     role: 2,
     shortDescription: "Accepte ou supprime des demandes d'amis",
