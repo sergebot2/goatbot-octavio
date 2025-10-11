@@ -5,7 +5,7 @@ module.exports = {
   config: {
     name: "adduser",
     version: "2.1",
-    author: "Octavio Wina",
+    author: "messie osango ",
     countDown: 5,
     role: 1,
     shortDescription: "Ajoute un utilisateur dans le groupe",
