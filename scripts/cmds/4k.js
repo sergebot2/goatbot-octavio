@@ -5,7 +5,7 @@ module.exports = {
     name: "4k",
     version: "1.8",
     role: 0,
-    author: "Octavio Wina",
+    author: "messie osango",
     countDown: 5,
     shortDescription: "Améliore les images en 4K",
     longDescription: "Transforme tes images en version 4K avec un rendu sombre, net et immersif.",
