@@ -2,7 +2,7 @@ module.exports = {
   config: {
     name: "adminkick",
     version: "3.5",
-    author: "Octavio Wina",
+    author: "messie osango",
     role: 2,
     shortDescription: {
       fr: "Retire les droits admin d’un membre"
