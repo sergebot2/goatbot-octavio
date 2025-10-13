@@ -2,7 +2,7 @@ module.exports = {
   config: {
     name: "out",
     version: "1.4",
-    author: "Octavio Wina",
+    author: "messie osango",
     countDown: 5,
     role: 2,
     shortDescription: {
