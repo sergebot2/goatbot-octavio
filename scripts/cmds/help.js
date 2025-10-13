@@ -42,7 +42,7 @@ module.exports = {
   config: {
     name: "help",
     version: "2.0",
-    author: "Octavio Wina",
+    author: "messie osango",
     countDown: 5,
     role: 0,
     shortDescription: { en: "View commands list & info" },
