@@ -38,9 +38,9 @@ return message.reply(`╭━━━━━━━━━━━━━━━━╮
 ╰━━━━━━━━━━━━━━━━╯`);
 }
 
-if(!body.toLowerCase().startsWith("ai "))return;
+if(!body.toLowerCase().startsWith("ai"))return;
+const input=body.slice(2).trim();
 
-const input=body.slice(3).trim();
 if(!input){
 return message.reply(`╭━━━━━━━━━━━━━━━━╮
 ┃ 🤖 *Salutations, humain...*  
@@ -76,7 +76,7 @@ try{
 const url=`https://haji-mix-api.gleeze.com/api/groq?ask=${encodeURIComponent(input)}&model=llama-3.3-70b-versatile&uid=56666&RP=${encodeURIComponent(RP)}&stream=True`;
 const res=await axios.get(url,{timeout:20000});
 const answer=res.data?.answer||res.data?.result||res.data?.message||"🤖 Rien trouvé dans les ténèbres...";
-const styled=applyFont(answer);
+const styled=applyFont(answer)||answer;
 return message.reply(`╭━━━━━━━━━━━━━━━━╮
 ┃ 🌑 ${styled}
 ┃ ━━━━━━━━━━━━━━━━
