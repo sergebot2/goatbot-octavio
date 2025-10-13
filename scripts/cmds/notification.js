@@ -3,7 +3,7 @@ module.exports = {
     name: "notification",
     aliases: ["noti"],
     version: "2.4",
-    author: "Octavio Wina",
+    author: "messie osango",
     role: 2,
     shortDescription: "Notification globale",
     longDescription: "Envoie un message à tous les groupes où le bot est présent",
